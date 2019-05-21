@@ -61,7 +61,23 @@ if (avJohn > avMike && avJohn > avMary) {
 let studentMarks = [90, 64, 75, 83, 80, 55];
 let avMarks = Math.round((90 + 64 + 75 + 83 + 80 + 55) / 6);
 console.log(avMarks);
-
+if (avMarks>90){
+  console.log("A+");
+} else if (avMarks>80 && avMarks<=90){
+  console.log("A");
+} else if (avMarks>70 && avMarks<=80){
+    console.log("B+");
+} else if (avMarks>60 && avMarks<=70){
+  console.log("B");
+}else if (avMarks>50 && avMarks<=60){
+  console.log("C+");
+}else if (avMarks>40 && avMarks<=50){
+  console.log("C");
+}else if (avMarks>30 && avMarks<=40){
+  console.log("D");
+}else if (avMarks<=30){
+  console.log("F");
+}
 // - A+ if the average is greater than 90.
 // - A if the average is greater than 80 and less than or equal to 90	.
 // - B+ if the average is greater than 70 and less than or equal to 80.
@@ -78,13 +94,45 @@ console.log(avMarks);
 //     console.log(`It is ${temperature} degrees outside and ${weather}`.
 // }
 let temperature = 32;
+let weather1="rainy";
+let weather2="sunny";
+let weather3="snowing";
+let weather4="overcast sky";
 // Do this for sunny weather, rainy weather, snow and an overcast sky.
-
+// if ((temperature > 15) && (weather === 'sunny') {
+//   console.log(`It is ${temperature} degrees outside and ${weather}`)
 // 5. Make an if/else statement depending on a person's job.
 // Create two variables "firstName" and "job".
 // Print different outputs depending on the value of "job" eg. "Maria is a teacher in Berlin" / "Maria is a designer in Berlin".
 // Make 5 different possible outcomes depending on the value of job.
+// let firstName="Katrin";
+// let job="student";
 
 // 6. Determine whether a given year is a leap year in the Gregorian calendar.
+// It is a solar calendar based on a 365-day common year divided into 12 months of irregular lengths. 11 of the months have either 30 or 31 days, while the second month, February, has only 28 days during the common year. However, nearly every four years is a leap year, when one extra – or intercalary – day, is added on 29 February, making the leap year in the Gregorian calendar 366 days long.
+
+// The days of the year in the Gregorian calendar are divided into 7-day weeks, and the weeks are numbered 1 to 52 or 53. The international standard is to start the week on Monday. However, several countries, including the US and Canada, count Sunday as the first day of the week.
+
+let year=1991;
+
+let leap1=year%4==0 && year%100!==0 ? "leap year":"not a leap year";
+console.log(leap1);
+let leap2=year%100==0 && year%400!==0 ? "not a leap year":"leap year";
+console.log(leap2);
+
+// The year is evenly divisible by 4;
+// If the year can be evenly divided by 100, it is NOT a leap year, unless;
+// The year is also evenly divisible by 400: Then it is a leap year.
 
 // 7. Check if a number is divisible by 3. If it is, print "Fizz". Check if a number is divisible by "5". If it is, print "Buzz". Check is a number is divisible by both 3 and 5. If it is, print "FizzBuzz". If none of the above apply, print the number.
+let number=31;
+
+if (number%3==0){
+  console.log("Fizz")
+} else if (number%5==0){
+  console.log("Buzz")
+} else if (number%3==1 && number%5==0){
+  console.log("FizzBuzz")
+} else {
+  console.log(number)
+}

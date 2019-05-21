@@ -5,7 +5,7 @@ let four = "HOWDY";
 
 console.log(one.charAt(8));
 
-if (one.charAt(8) !== "") {
+if (one.charAt(8) != "") {
   console.log("This string has at least 8 charakters.");
 } else {
   console.log("This string is shorter than 8 charakters.");
