@@ -1,140 +1,188 @@
-let two = 2;
-let one = two.toString();
-if (one.includes(".") == true) {
-  console.log("triple espresso");
-} else if (one.includes(".") == false) {
-  console.log("coffee");
-}
+// const num = "20" + 20;
+// console.log(parseInt(num));
+// const num1 = "2.3" + 20;
+// console.log(parseInt(num1));
 
-console.log(one);
+// Date and Time
+// const now = Date();
+// console.log(now);
+// console.log(typeof now);
 
-let num = 2.78;
-let ans = num % 1 === 0 ? "coffee" : "triple espresso";
-console.log(ans);
+// const today = new Date();
+// console.log(today);
+// console.log(typeof today);
 
-if (num % 2 < 1 && num % 2 != 0) {
-  console.log("triple espresso");
-} else {
-  console.log("espresso");
-}
+// const rightNow = new Date().getMonth() + 1;
+// console.log(rightNow);
 
-if (num === Math.floor(num)) {
-  console.log("coffee");
-} else {
-  console.log("triple espresso");
-}
+// console.log(typeof new Date());
 
-// Pitfalls
-// e number
+// const year = new Date().getFullYear();
+// console.log(year);
 
-console.log(4e2);
+// // Date=string new Date=object
+// // methods only work with object so newDate().getDay()
+// // .binds it to function ()calling it
 
-const sum = 23 / 0;
-console.log(typeof Infinity);
+// const hours = new Date().getHours();
+// console.log(hours);
+// console.log(typeof hours);
 
-// rounding possible mistakes due to binary calculation
+// const day = new Date().getDay();
+// console.log(day);
 
-let sum1 = (0.1 + 0.2).toFixed(2);
-sum2 = parseFloat(sum1);
-console.log(sum1);
-console.log(sum2);
+// // const now = new Date().getDate();
 
-// NaN
-let val = 0 / 0;
-console.log(val);
+// const now = new Date().setDate(20);
+// // Number of miliseconds
+// console.log(now);
 
-// Hoisting first console than declaring
-console.log(foo);
+// const months1 = new Date().getMonth() + 1;
+// console.log(months1);
 
-var foo = "hello world";
+// const season1 = "Winter";
+// const season2 = "Spring";
+// const season3 = "Summer";
+// const season4 = "Autumn";
 
-// var, let, const
-// const a = "foo";
-// a = "bar";
+// if (months1 === 12 || 1 || 2) {
+//   console.log(season1);
+// } else if (months1 === 3 || 4 || 5) {
+//   console.log(season2);
+// } else if (months1 === 6 || 7 || 8) {
+//   console.log(season3);
+// } else console.log(season4);
 
-// Global Scope(Static Scope) cannot see the block scope
-// Block scope can see the gobal scope
+// let x = 0;
 
-let x = 1;
+// switch (x) {
+//   case 0:
+//     // value of variable
+//     state = "OFF";
+//     break;
+//   case 1:
+//     state = "ON";
+//     break;
+//   // breaks out of
+//   default:
+//     state = "Stateless";
+// }
 
-{
-  let x = 2;
-  console.log(x + "block");
-}
+// let name = "Anna";
+// switch (name) {
+//   case "Katrin":
+//     state = `My name is ${name}.`;
+//     break;
+//   default:
+//     state = "other name";
+// }
+// console.log(typeof state);
+// console.log(state);
 
-console.log(x + "Global");
+// switch exercises
+// 1. Color Analyzer
+// Create a function that takes a string in its parameters. Console log a different statement for each color (red, blue, green, yellow).
 
-// let ran = Math.random;
-// let r = Math.floor(Math.random());
+// Example: analyzeColor("Red") -> "Red is a primary color".
 
-// let val1 = Math.floor(Math.random() * 10 + 1);
+// let colors = ["red", "blue", "green", "yellow"];
 
-let r = Math.floor(Math.random() * 5 + 1);
+// let chosenone = "yellow";
 
-const val1 = "You are number one!";
-if (r === 1) {
-  console.log(val1);
-} else if (r === 2) {
-  console.log("Number two");
-} else if (r === 3) {
-  console.log("Number three");
-} else if (r === 4) {
-  console.log("Number four");
-} else console.log("Number five");
+// switch (chosenone) {
+//   case "red":
+//     state = colors[0];
+//     break;
+//   case "blue":
+//     state = colors[1];
+//     break;
+//   case "green":
+//     state = colors[2];
+//     break;
+//   case "yellow":
+//     state = colors[3];
+//     break;
+//   default:
+//     state = "no color is chosen";
+// }
+// console.log(state);
 
-const mixed = [true, "foo", 223, NaN];
+// 2. Grading
+// Create a function that takes a grade in its parameters. Console log comments depending on the grade.
 
-console.log(mixed);
+// Example: grade("A") -> "Good job!", grade("F") -> "Failed"
 
-const cities = ["Rome", "Amsterdam", "Floriapa", "Aleppo", "Kerkira"];
+// const gradeNote = Math.floor(Math.random() * 6 + 1);
+// const grade = ["A", "B", "C", "D", "E", "F"];
+// // console.log(grade);
 
-// console.log(cities.length());
+// switch (gradeNote) {
+//   case 1:
+//     state = `${grade[0]} super!`;
+//     break;
+//   case 2:
+//     state = `${grade[1]} auch super!`;
+//     break;
+//   case 3:
+//     state = `${grade[2]} immernoch super!`;
+//     break;
+//   case 4:
+//     state = `${grade[3]} ist auch okay!`;
+//     break;
+//   case 5:
+//     state = `${grade[4]} gut!`;
+//     break;
+//   case 6:
+//     state = `${grade} who cares?`;
+//     break;
+//   default:
+//     state = "no grade chosen";
+// }
+// console.log(state);
 
-// console.log(cities[1,2]+cities[]);
+// 3. What month is it?
+// Create a function using the new Date().getMonth() method and switch case in order to return the month of the year. Return "It's the month of May!"
+// let a = new Date().getMonth();
+// console.log(a);
 
-console.log(cities[cities.length - 1]);
-
-// first and second last
-const toDo = [
-  "shop groceries",
-  "feeding goats",
-  "relax",
-  "doing homework",
-  "sleeping"
+let weekdays = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday"
 ];
+let actualDay = new Date().getDay();
+console.log(actualDay);
 
-toDo[1] = "do nothing";
-// change second item
-toDo.push("do something");
-// add item at the end
-toDo.shift();
-// remove first item
-console.log(toDo);
+switch (actualDay) {
+  case 0:
+    state = weekdays[0];
+    break;
+  case 1:
+    state = weekdays[1];
+    break;
+  case 2:
+    state = weekdays[2];
+    break;
+  case 3:
+    state = weekdays[3];
+    break;
+  case 4:
+    state = weekdays[4];
+    break;
+  case 5:
+    state = weekdays[5];
+    break;
+  case 6:
+    state = weekdays[6];
+    break;
+  default:
+    state = "no date";
+}
+console.log(state);
 
-// array methods
-// add item to end
-
-cities.push("Utrecht");
-
-//remove last item //no args
-cities.pop();
-
-// remove first item
-cities.shift();
-
-// add item to beginning
-cities.unshift("Darsalaam");
-
-// swap with bracket notation
-cities[2] = "Skagen";
-
-console.log(cities);
-
-const euroCities = ["Paris", "London", "Valletta", "Prague", "Rome"];
-euroCities[0] = "Berlin";
-console.log(euroCities.length);
-euroCities.pop();
-euroCities.push("Budapest");
-euroCities[2] = "Athens";
-euroCities.reverse();
-console.log(euroCities);
+// Input: Number of the Day of the weekdays
+// Output: Name of the Weekday
