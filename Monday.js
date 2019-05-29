@@ -67,30 +67,101 @@
 // between the total weight of the containers and the weight
 // your ship can afford (free available weight).
 
-let containerAmount = 6;
-let containerWeight = 1;
-let i = 1;
-let container = 1;
-let shipTotal = 10000;
-let sum;
-let sum2;
-let sum3;
-let total;
-// let first = 100 * 10;
-// let second = 99 * 20;
+// let container = 1;
+// let shipTotal;
+// let sum;
+// let sum2;
+// let sum3;
+// let total;
+// // let first = 100 * 10;
+// // let second = 99 * 20;
 
-while (container <= containerAmount) {
-  if (container === 1) {
-    sum = container * 10 * 100;
-    console.log(sum);
-  } else if (container === 2) {
-    sum2 = container * 20 * 99;
-    console.log(sum2);
-  } else if (container === 3) {
-    sum3 = container * 50 * 99;
-    console.log(sum3);
-  }
-  total = sum + sum2 + sum3;
-  console.log(total, shipTotal);
-  container++;
+// while (shipTotal <= 10000) {
+//   if (container <= 100) {
+//     container++;
+//     sum = container * 10 * 100;
+//     console.log(sum);
+//   } else if (container <= 200) {
+//     // break;
+//     // breaks out if
+//     container++;
+//     sum2 = container * 20 * 99;
+//     console.log(sum2);
+//   } else if (container <= 250) {
+//     container++;
+//     sum3 = container * 50 * 99;
+//     console.log(sum3);
+//   }
+//   shipTotal = sum + sum2 + sum3;
+//   console.log(total, shipTotal);
+// }
+
+// break
+// let foo = 0;
+// while (foo <= 10) {
+//   foo++;
+//   if (foo % 2 === 0) {
+//     break;
+//     // or continue; to skip
+//   }
+//   console.log(foo);
+// }
+
+let weights, numbers, totalWeight, maxWeight, i;
+
+weights = [10, 20, 50, 100, 200, 500];
+numbers = [100, 100, 50, 50, 100, 100];
+totalWeight = 0;
+maxWeight = 10000;
+totalContainers = 0;
+i = 0;
+
+while (totalWeight < maxWeight) {
+  totalWeight += weights[i] * numbers[i];
+  totalContainers += numbers[i];
+  console.log(i, totalWeight, " = ", weights[i], "*", numbers[i]);
+  i++;
 }
+while (totalWeight > maxWeight) {
+  totalWeight -= weights[i - 1];
+  totalContainers -= 1;
+}
+
+console.log(`The ${totalContainers} containers in the ship weight ${totalWeight} kg, 
+which is ${maxWeight - totalWeight} kg less than the maximum weight.`);
+
+let maxWeight = 10000;
+let weightIncluded = 0;
+let id = 1;
+let weightNextContainer = 10;
+
+while (maxWeight >= weightIncluded + weightNextContainer) {
+  if (id <= 100) {
+    weightIncluded += 10;
+    id === 100 ? (weightNextContainer = 20) : (weightNextContainer = 10);
+  } else if (id <= 200) {
+    weightIncluded += 20;
+    id === 200 ? (weightNextContainer = 50) : (weightNextContainer = 20);
+  } else if (id <= 250) {
+    weightIncluded += 50;
+    id === 250 ? (weightNextContainer = 100) : (weightNextContainer = 50);
+  } else if (id <= 300) {
+    weightIncluded += 100;
+    id === 300 ? (weightNextContainer = 200) : (weightNextContainer = 100);
+  } else if (id <= 400) {
+    weightIncluded += 200;
+    id === 400 ? (weightNextContainer = 500) : (weightNextContainer = 200);
+  } else {
+    weightIncluded += 500;
+    weightNextContainer = 500;
+  }
+  //in case you want to see every step!
+  // console.log(`${id} container included, the current Weight is {weightIncluded}. Remain weight is ${maxWeight - weightIncluded}!`)
+  id++;
+}
+
+console.log(
+  `I have included ${id -
+    1} containers to the ship and the weight remained is ${maxWeight -
+    weightIncluded}!`
+);
