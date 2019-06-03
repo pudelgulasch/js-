@@ -1,6 +1,6 @@
-// Create an array filled with your friends' and family's names. 
+// Create an array filled with your friends' and family's names.
 // Loop over the array and greet each friend e.g. Hello Maria! Hello Mike! etc.
-// **Bonus**: Print the indexes of each item in the array. Expected output example: 
+// **Bonus**: Print the indexes of each item in the array. Expected output example:
 // Mike is at index 1 of my friends array.
 
 // let friends=["Elisa", "Oli","Ursula","Peter","Mathis","Richard"];
@@ -8,7 +8,7 @@
 
 // for (let i=0;i < friends.length; i++){
 //  console.log(`Hallo ${friends[i]}!`);
- 
+
 // }
 
 // Use a nested for loop to show the tables for every multiplier from 1 to 10 (100 results total).
@@ -24,7 +24,7 @@
 // 	i++;
 // }
 
-// Write a program to calculate the average marks of the following students Then, 
+// Write a program to calculate the average marks of the following students Then,
 // this average is used to determine the corresponding grade for the class.
 // John    90
 // Tom     60
@@ -50,16 +50,15 @@
 //     }
 //     else if (parseInt(studentMarks[i])<80){
 //         console.log(studentMarks[i]+" C");
-//     }   
+//     }
 //     else if (parseInt(studentMarks[i])<90){
 //         console.log(studentMarks[i]+" B");
-//     }    
+//     }
 //     else if (parseInt(studentMarks[i])<100){
 //         console.log(studentMarks[i]+" A");
 //     }
 //     i++;
 // }
-
 
 // Check all numbers from 1 to 100 and print to the console only the primes.
 // Primes are the numbers that are perfectly divisible ONLY by themselves and 1
@@ -76,13 +75,38 @@
 //     else console.log(i);
 //     i++;
 //     }
-let j=3;
-let i;
-for (i=0; i<=100; i++){
-for (i=2; i<j; i++){
-    if (j%i===0){
-        console.log(i+" is not a prime number!")
-    } else (i+" is a prime number");
-}
-j++;
-}
+// let num;
+
+// if (num <= 2 && num % 3 === 0 && num % 2 === 0) {
+//   num = true;
+// } else num = false;
+
+// let j = 3;
+// let i;
+// for (i = 0; i <= 100; i++) {
+//   for (i = 2; i < j; i++) {
+//     if (j % i === 0) {
+//       console.log(i + " is not a prime number!");
+//     } else i + " is a prime number";
+//   }
+//   j++;
+// }
+
+// function isPrime(num) {
+//   if (num <= 1) {
+//     return true;
+//   } else if (num <= 3) {
+//     return true;
+//   } else if (num % 2 === 0 || num % 3 === 0) {
+//     return false;
+//   }
+
+//   let i = 5;
+//   while (i * i <= num) {
+//     if (num % i === 0 || num % (i + 2) === 0) {
+//       return false;
+//     }
+//     i += 6;
+//   }
+//   return true;
+// }
