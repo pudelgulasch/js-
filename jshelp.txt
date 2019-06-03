@@ -1,0 +1,35 @@
+Parenthesis
+Multiplication
+Division
+Addition
+Substraction
+
+str + kc create comment
+str + ku delete comment
+
+declare a variable - let a;
+assign a variable - let a = "string";
+
++ to add numbers together inside a string
+also - / * / /
+
+variable++ equals var variable=variable+1
+same with --/
+
+decimal numbers -> floats / floating point numbers
+% remainder operator, shows you the rest after division
+
+mathematical operation and assignment
++=  or -= / *= / /=   f.e. myVar += 5 equals myVar = myVar + 5;
+
+var myStr = "I am a \"double quoted\" string inside \"double quotes\".";
+if you use quotations inside a string 
+
+\'	single quote
+\"	double quote
+\\	backslash
+\n	newline
+\r	carriage return
+\t	tab
+\b	backspace
+\f	form feed
