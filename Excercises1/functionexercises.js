@@ -159,62 +159,126 @@
 // let result = numberToSquareRoot(3);
 // console.log(result);
 
-// return boolean with if statement
-function divisibleByFive(n) {
-  if (n % 5 === 0) {
-    return true;
-  } else return false;
-}
-console.log(divisibleByFive(6));
+// function returnSquare(x) {
+//     if (typeof x !== 'number') {
+//       return 'The action you are trying to perform is not possible!';
+//     } else {
+//       return x*x;
+//     }
+//   }
 
-// to check if a string is empty, "else if" is nessesary
-function isEmpty(s) {
-  if (s === "") {
-    return true;
-  } else if (s != "") {
-    return false;
+//   const squareOfNine = returnSquare("true");
+//   console.log(squareOfNine);
+//   Ausblenden
+
+// Input=Celcius Output= Fahrenheit
+
+// function celToFa(degress) {
+//   let fa = (degress * 9) / 5 + 32;
+//   return fa;
+// }
+// let fahrenheit = celToFa(33);
+// console.log(fahrenheit);
+
+// Global scope (fahrenheitToCelsius, tempToday, tempYesterday)
+// local Scope (fahrenhei, celcius)
+// Function args are bound to the LOCAL SCOPE
+
+// const fahrenheitToCelsius = function(fahrenheit) {
+//   let celcius = fahrenheit - (32 * 5) / 9;
+//   return celcius;
+// };
+// let tempToday = fahrenheitToCelsius();
+// let tempYesterday = fahrenheitToCelsius();
+
+// const weightOnEarth = kg => kg * 0.165;
+// let weightOnMoon = weightOnEarth(54);
+// console.log(weightOnMoon);
+
+// Factorial Function
+// 5 != 1 * 2 * 3 * 4 * 5;
+
+// function factorial(n) {
+//   if (n == 0 || n == 1) {
+//     return 1;
+//   }
+//   return factorial(n - 1) * n;
+// }
+// console.log(factorial(3));
+
+// or in a loop
+// function factorial2(n) {
+//   j = 1;
+//   for (i = 1; i <= n; i++) {
+//     // j *= i; code standard
+//     j = j * i;
+//   }
+//   return j;
+// }
+// console.log(factorial2(4));
+// 1*4=4; 2*4=8; 3*8=24; i starts counting at 1; 3 is smaller or equal to 4  so it stops;
+
+// function factorial(n) {
+//   return n != 1 ? n * factorial(n - 1) : 1;
+// }
+// console.log(factorial(2));
+
+// Write a function that accepts several parameters and calculates the amount of money that will have been saved as a pension until a person retires.
+// The parameters that should be defined are:
+//
+// The current age of the person // ex. 40
+//
+// The age that the person collects the pension // ex. 60
+//
+// The monthly wage the person earns // ex. 1000
+//
+// The percentage (as integer)  that the person saves each month // ex. 10%
+//
+// If the person has already retired then the message 'Calculate your past memories' should be printed.
+//
+// If not, then the program should calculate how many years remain until the person retires, the monthly
+// income and take a specific percent of this income every month as saved money.
+//
+// Example: A lady is 40 years old, she retires at 65, she earns 2000€ per month and she saves  5% of it.
+// How much money will she have saved until she retires? // This case is 30.000
+
+function pension(age, retiredAt, cashMonth, savMonth) {
+  let years = retiredAt - age - 1;
+  let year = 12 * years + 6;
+  let pensionMonth = cashMonth * (savMonth / 10);
+  let cashTotal = cashMonth * year;
+  let pension = cashTotal * (savMonth / 10);
+  if (age > retiredAt) {
+    return `Calculate your past memories`;
+  } else
+    return `You have ${years} years until you retire, you earn ${cashMonth} a month and save ${pensionMonth} a month until you retire.`;
+}
+
+console.log(pension(40, 65, 2000, 5));
+
+function retires(age, collect, wage, save) {
+  let yearsToRetire = collect - wage;
+  let saveingPerYear = wage * (save / 100) * 12;
+  let totalSaving = yearsToRetire * saveingPerYear;
+  if (
+    typeof age !== "number" ||
+    typeof collect !== "number" ||
+    typeof wage !== "number" ||
+    typeof save !== "number"
+  ) {
+    return "Please use integers!";
+  } else if (age >= collect) {
+    return "Please collect your past memories";
+  } else if (yearsToRetire === 1) {
+    return `You have ${yearsToRetire} years until you retire, before you can collect ${totalSavings}.`;
   }
 }
 
-let result = isEmpty("");
-console.log(result);
+// Bitweise-XOR-Operator verknüpft alle Bits zweier Integer-Werte nach den Regeln des logischen XOR:
+// 1 XOR 0 und 0 XOR 1 ergeben 1 und alle anderen Kombinationen ergeben 0.
+let range={0,5};
+let max = Math.abs(Math.max(range));
+let min = Math.abs(Math.max(range));
 
-// even or odd
-function isEvenOrOdd(num) {
-  return num % 2 ? "odd" : "even";
-}
-
-// concat
-function concatName(firstName, lastName) {
-  return `${lastName}, ${firstName}`;
-}
-// reverse
-function reverse(arr) {
-  return arr.reverse();
-}
-// concat array
-function concat(arr1, arr2) {
-  return arr1.concat(arr2);
-}
-
-// ZU NIKE
-// Input=Celcius Output= Fahrenheit
-
-function celToFa(degress) {
-  let fa = (degress * 9) / 5 + 32;
-  return fa;
-}
-let fahrenheit = celToFa(33);
-console.log(fahrenheit);
-
-// Ich glaube das kennst du schon. Haben wir aber der degress-Übung gemacht
-// go on edabit.com
-// create an account
-// click challenges
-// select Javascript, select very easy
-
-// arrow-function(because of the big arrow sign after the argument),
-// another way of writing a function for sort functions
-const add = (a, b) => a + b;
-let sum = add(5, 5);
-console.log(sum);
+console.log(max);
+console.log(min);
