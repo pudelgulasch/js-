@@ -105,6 +105,20 @@ function numberSyllables(word) {
 }
 // RegExp to find digits in a string, zum Beispiel \d finds a digit from 0-9
 let x = /\d/;
+// You can use a replace regular expression.
+
+// s/[;,\t\r ]|[\n]{2}/\n/g
+// s/ at the beginning means a search
+// The characters between [ and ] are the characters to search for (in any order)
+// The second / delimits the search-for text and the replace text
+// In English, this reads:
+
+// "Search for ; or , or \t or \r or  (space) or exactly two sequential \n and replace it with \n"
+
+// In C#, you could do the following: (after importing System.Text.RegularExpressions)
+
+// Regex pattern = new Regex("[;,\t\r ]|[\n]{2}");
+// pattern.Replace(myString, "\n");
 
 // calling characters of an array
 var numbers = [1, 2, 3, 4];

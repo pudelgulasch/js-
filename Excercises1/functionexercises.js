@@ -242,43 +242,175 @@
 // Example: A lady is 40 years old, she retires at 65, she earns 2000€ per month and she saves  5% of it.
 // How much money will she have saved until she retires? // This case is 30.000
 
-function pension(age, retiredAt, cashMonth, savMonth) {
-  let years = retiredAt - age - 1;
-  let year = 12 * years + 6;
-  let pensionMonth = cashMonth * (savMonth / 10);
-  let cashTotal = cashMonth * year;
-  let pension = cashTotal * (savMonth / 10);
-  if (age > retiredAt) {
-    return `Calculate your past memories`;
-  } else
-    return `You have ${years} years until you retire, you earn ${cashMonth} a month and save ${pensionMonth} a month until you retire.`;
-}
+// function pension(age, retiredAt, cashMonth, savMonth) {
+//   let years = retiredAt - age - 1;
+//   let year = 12 * years + 6;
+//   let pensionMonth = cashMonth * (savMonth / 10);
+//   let cashTotal = cashMonth * year;
+//   let pension = cashTotal * (savMonth / 10);
+//   if (age > retiredAt) {
+//     return `Calculate your past memories`;
+//   } else
+//     return `You have ${years} years until you retire, you earn ${cashMonth} a month and save ${pensionMonth} a month until you retire.`;
+// }
 
-console.log(pension(40, 65, 2000, 5));
+// console.log(pension(40, 65, 2000, 5));
 
-function retires(age, collect, wage, save) {
-  let yearsToRetire = collect - wage;
-  let saveingPerYear = wage * (save / 100) * 12;
-  let totalSaving = yearsToRetire * saveingPerYear;
-  if (
-    typeof age !== "number" ||
-    typeof collect !== "number" ||
-    typeof wage !== "number" ||
-    typeof save !== "number"
-  ) {
-    return "Please use integers!";
-  } else if (age >= collect) {
-    return "Please collect your past memories";
-  } else if (yearsToRetire === 1) {
-    return `You have ${yearsToRetire} years until you retire, before you can collect ${totalSavings}.`;
-  }
-}
+// function retires(age, collect, wage, save) {
+//   let yearsToRetire = collect - wage;
+//   let saveingPerYear = wage * (save / 100) * 12;
+//   let totalSaving = yearsToRetire * saveingPerYear;
+//   if (
+//     typeof age !== "number" ||
+//     typeof collect !== "number" ||
+//     typeof wage !== "number" ||
+//     typeof save !== "number"
+//   ) {
+//     return "Please use integers!";
+//   } else if (age >= collect) {
+//     return "Please collect your past memories";
+//   } else if (yearsToRetire === 1) {
+//     return `You have ${yearsToRetire} years until you retire, before you can collect ${totalSavings}.`;
+//   }
+// }
 
 // Bitweise-XOR-Operator verknüpft alle Bits zweier Integer-Werte nach den Regeln des logischen XOR:
 // 1 XOR 0 und 0 XOR 1 ergeben 1 und alle anderen Kombinationen ergeben 0.
-let range={0,5};
-let max = Math.abs(Math.max(range));
-let min = Math.abs(Math.max(range));
+// let range={0,5};
+// let max = Math.abs(Math.max(range));
+// let min = Math.abs(Math.max(range));
 
-console.log(max);
-console.log(min);
+// console.log(max);
+// console.log(min);
+
+// Write a function that calculates how much money someone is going to earn until the end of the week
+// by just accepting a number from 1 to 7 that represents the days of the week.
+// (1 is for Monday, 2 for Tuesday, etc 7 is for Sunday).
+// Given some one earns 10$ per hour and his working schedule is this:
+// let i = 0;
+// while (i === weekDay.length) {
+//   i++;
+//   let hoursDay = [0, 4, 6, 8, 10, 2, 0, 0];
+//   let moneyPerDay = hoursDay[i] * 10;
+// }
+// console.log(moneyPerDay);
+// function weekDay(...arg) {
+//   Math.max(...weekDay);
+//   Math.min(...weekDay);
+
+//   function differenceMaxMin(arr) {
+//     return Math.max(...arr) - Math.min(...arr);
+//   }
+// }
+// let weekDay = [
+//   "",
+//   "Monday",
+//   "Tuesday",
+//   "Wednesday",
+//   "Thursday",
+//   "Friday",
+//   "Saturday",
+//   "Sunday"
+// ];
+
+// switch (x) {
+//   case 0:
+//     // value of variable
+//     state = "OFF";
+//     break;
+//   case 1:
+//     state = "ON";
+//     break;
+//   // breaks out of
+//   default:
+//     state = "Stateless";
+// }
+
+// Monday: works 4hours
+// Tuesday: works 6hours
+// Wednesday: works 8 hours
+// Thursday: works 10hours
+// Saturday: works 2 hours
+// Fridays and Sundays are days-off.
+
+// const weekDay = (...args) => {
+// let i = 0;
+// for (i = 0; i === hoursDay.length; i++) {
+//   console.log(moneyPerDay);
+// }
+
+// };
+
+// console.log(weekDay(1));
+
+// For example: if we execute calculate RestOfWeekMoney(3), The number 3 is passed as
+// argument indicates that to day is Wednesday so we calculate from Wednesday (included)
+// until Sunday.With calculate RestOfWeekMoney(4) we start counting from Thursday until Sunday etc.
+
+// let hoursRemaining = 0;
+
+// function calculateUntilEndOfWeek(numDay) {
+//   const moneyPerHour = 10;
+
+//   switch (numDay) {
+//     case 1:
+//       hoursRemaining += 4;
+//       stringExample = "Monday, ";
+//       break;
+//     case 2:
+//       hoursRemaining += 6;
+//       stringExample = "Tuesday, ";
+//       break;
+//     case 3:
+//       hoursRemaining += 8;
+//       stringExample = "Wednesday, ";
+//       break;
+//     case 4:
+//       hoursRemaining += 10;
+//       stringExample = "Thursday, ";
+//       break;
+//     case 6:
+//       hoursRemaining += 2;
+//       stringExample = "Saturday, ";
+//       break;
+//     default:
+//       hoursRemaining += 0;
+//       stringExample = "Friday or Sunday.";
+//       break;
+//   }
+
+//   numDay++;
+
+//   if (numDay <= 7) {
+//     calculateUntilEndOfWeek(numDay);
+//   } else {
+//     console.log(
+//       `The money that you are going to earn until the end of the week is ${hoursRemaining *
+//         moneyPerHour}$`
+//     );
+//   }
+// }
+
+// calculateUntilEndOfWeek(1);
+
+// c4n y0u r34d th15?
+// Create a function that takes a string as an argument and returns a coded (h4ck3r 5p34k) version of the string.
+
+// Examples:
+
+// hackerSpeak("javascript is cool") ➞ "j4v45cr1pt 15 c00l"
+// hackerSpeak("programming is fun") ➞ "pr0gr4mm1ng 15 fun"
+// hackerSpeak("become a coder") ➞ "b3c0m3 4 c0d3r"
+// Notes For your program to work properly, the function should replace all 'a's with 4, 'e's with 3, 'i's with 1, 'o's with 0, and 's's with 5.
+
+function stringToCode(stringString) {
+  for (let i = 1; i < stringString.length; i++) {
+    let num = Math.floor(Math.random() * 24 + 1);
+    return stringString.replace(stringString[i] / i, num);
+  }
+}
+console.log(stringToCode("Hallo Emil"));
+
+// The array.join() method is an inbuilt function in JavaScript which is used to join the elements of an
+// array into a string.The elements of the string will be separated by a specified separator and its default
+// value is comma(, ).
