@@ -287,44 +287,6 @@
 // by just accepting a number from 1 to 7 that represents the days of the week.
 // (1 is for Monday, 2 for Tuesday, etc 7 is for Sunday).
 // Given some one earns 10$ per hour and his working schedule is this:
-// let i = 0;
-// while (i === weekDay.length) {
-//   i++;
-//   let hoursDay = [0, 4, 6, 8, 10, 2, 0, 0];
-//   let moneyPerDay = hoursDay[i] * 10;
-// }
-// console.log(moneyPerDay);
-// function weekDay(...arg) {
-//   Math.max(...weekDay);
-//   Math.min(...weekDay);
-
-//   function differenceMaxMin(arr) {
-//     return Math.max(...arr) - Math.min(...arr);
-//   }
-// }
-// let weekDay = [
-//   "",
-//   "Monday",
-//   "Tuesday",
-//   "Wednesday",
-//   "Thursday",
-//   "Friday",
-//   "Saturday",
-//   "Sunday"
-// ];
-
-// switch (x) {
-//   case 0:
-//     // value of variable
-//     state = "OFF";
-//     break;
-//   case 1:
-//     state = "ON";
-//     break;
-//   // breaks out of
-//   default:
-//     state = "Stateless";
-// }
 
 // Monday: works 4hours
 // Tuesday: works 6hours
@@ -346,6 +308,31 @@
 // For example: if we execute calculate RestOfWeekMoney(3), The number 3 is passed as
 // argument indicates that to day is Wednesday so we calculate from Wednesday (included)
 // until Sunday.With calculate RestOfWeekMoney(4) we start counting from Thursday until Sunday etc.
+
+const daysTillPay = num => {
+  let hoursDay = [4, 6, 8, 10, 0, 2, 0];
+  let weekDay = [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+    "Sunday"
+  ];
+  let sum = 0;
+  num -= 1;
+  hoursDay.splice(0, num);
+  weekDay.splice(0, num);
+  // length counts from 0 till 7 because its the actual number of items not the indexnumbers
+  // splice cuts out from given indexnummer till item counting number
+  for (i = 0; i < hoursDay.length; i++) {
+    sum += hoursDay[i] * 10;
+  }
+  return `You've got ${weekDay.length} days to work until you get paid ${sum}.`;
+};
+
+console.log(daysTillPay(3));
 
 // let hoursRemaining = 0;
 
@@ -390,8 +377,7 @@
 //     );
 //   }
 // }
-
-// calculateUntilEndOfWeek(1);
+// console.log(calculateUntilEndOfWeek(3));
 
 // c4n y0u r34d th15?
 // Create a function that takes a string as an argument and returns a coded (h4ck3r 5p34k) version of the string.
@@ -403,14 +389,65 @@
 // hackerSpeak("become a coder") ➞ "b3c0m3 4 c0d3r"
 // Notes For your program to work properly, the function should replace all 'a's with 4, 'e's with 3, 'i's with 1, 'o's with 0, and 's's with 5.
 
-function stringToCode(stringString) {
-  for (let i = 1; i < stringString.length; i++) {
-    let num = Math.floor(Math.random() * 24 + 1);
-    return stringString.replace(stringString[i] / i, num);
-  }
-}
-console.log(stringToCode("Hallo Emil"));
+// function stringToCode(stringString) {
+//   for (let i = 1; i < stringString.length; i++) {
+//     let num = Math.floor(Math.random() * 24 + 1);
+//     return stringString.replace(stringString[i] / i, num);
+//   }
+// }
+// console.log(stringToCode("Hallo Emil"));
+
+// you don need the return with arrow, only inside for loop
+// only curly brackets if you use a code block
+
+const hackerspeak = str =>
+  str
+    .replace(/a/gi, 4)
+    .replace(/e/gi, 3)
+    .replace(/i/gi, 1)
+    .replace(/o/gi, 0)
+    .replace(/s/gi, 5);
+
+console.log(hackerspeak("Javascript is awesome"));
 
 // The array.join() method is an inbuilt function in JavaScript which is used to join the elements of an
 // array into a string.The elements of the string will be separated by a specified separator and its default
 // value is comma(, ).
+
+// Create a function that accepts a string, checks if it's a valid email address and returns either
+// true or false, depending on the evaluation.
+//
+// **Notes**
+// * The string must contain an @ character.
+// * The string must contain a . character.
+// * The @ must have at least one character in front of it.
+// * e.g. "john@example.com" is valid while "@example.com" is invalid.
+// * The . and the @ must be in the appropriate places.
+// * e.g. "john.smith@com" is invalid while "john.smith@email.com" is valid.
+
+const valid = email => {
+  let newString = [];
+  email.includes("@") ? (newString = email.split("@")) : false;
+  return newString[1] && newString[0].length > 0 && newString[1].includes(".")
+    ? true
+    : false;
+
+  // if (email.includes("@")) {
+  //   newString = email.split("@");
+  // } else {
+  //   return false;
+  // }
+  // if (newString[0].length > 0) {
+  //   if (newString[1].includes(".")) {
+  //     return true;
+  //   }
+  // } else {
+  //   return false;
+  // }
+  // return false;
+};
+console.log(valid("katrinsalac@gmail.com"));
+
+// 1 pure
+// 3 variables
+// 1 for loop
