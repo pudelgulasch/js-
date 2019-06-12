@@ -199,29 +199,3 @@
 // };
 
 // console.log(greatEqual([20, 5, 6], 3));
-
-// Create a function that takes a string, checks if it has the same number of 'x's and 'o's and returns either true or false.
-
-// Return a boolean value (true or false).
-// The string can contain any character.
-// When neither an x nor an o is in the string, return true.
-// Examples:
-
-// XO("ooxx") ➞ true
-// XO("xooxx") ➞ false
-// XO("ooxXm") ➞ true (case insensitive)
-// XO("zpzpzpp") ➞ true (returns true if no x and o)
-// XO("zzoo") ➞ false
-
-const stringChar = char => {
-  char2 = char.toLowerCase();
-  return char2.includes("x") &&
-    char2.includes("o") &&
-    char2.match(/x/gi).length === char2.match(/o/gi).length
-    ? true
-    : false;
-};
-
-console.log(stringChar("xdeidjeu"));
-
-(Array.match(/x/gi) || []).length;
