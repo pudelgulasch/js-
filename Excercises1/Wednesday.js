@@ -30,7 +30,7 @@ const worldCities = [...africanCities, ...africanCities];
 // console.log(worldCities.sort());
 console.log(myNums.sort());
 
-//compare funtion (callback)
+//compare function (callback)
 val = myNums.sort(function(x, y) {
   return x - y;
 });

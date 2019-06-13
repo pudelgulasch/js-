@@ -88,6 +88,7 @@
 // Notes The given integer will always be equal to or greater than 1. Include the number (the number in the parameters).
 
 // with help
+
 // const amplify = int => {
 //   let arr = [];
 
@@ -140,8 +141,11 @@
 
 const evenNums = num => {
   arr = [];
-  for (i = 0; i <= num; i++) {
-    return num % 2 == 0 ? arr.push[num * 10] : arr.push[i];
+  for (i = 1; i <= num; i++) {
+    if (num % 2 == 0) {
+      arr.push(i);
+    }
   }
+  return arr;
 };
 console.log(evenNums(4));
