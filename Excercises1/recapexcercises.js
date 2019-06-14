@@ -84,3 +84,38 @@ function makeTree(num) {
 
 makeTree(50);
 //replace space
+
+// Arrays
+// Leap Years Write a program which finds the leap years in a given range of years.
+
+// First & Last Write a program that takes an array and returns the first and last elements as a new array.
+
+// Expected Output: [5, 10, 15, 20, 25] ➞ [5, 25] ["javascript", 13, null, false, true] ➞ ["javascript", true] [undefined, 4, "6", "hello", null] ➞ [undefined, null]
+
+// Find the Smallest Number Write a program that takes an array of numbers and returns the smallest number in the set.
+// E.g [34, 15, 88, 2] ➞ 2 [34, -345, -1, 100] ➞ -345 [-76, 1.345, 1, 0] ➞ -76 [0.4356, 0.8795, 0.5435, -0.9999] ➞ -0.9999 [7, 7, 7] ➞ 7
+
+// Return Student Names Write a program that takes an array of students and returns an array of student names. Example: [ { name: "Steve"}, { name: "Mike"}, { name: "John"} ]
+// ➞ ["Steve", "Mike", "John"]
+
+// Spell it out Write a program which takes in a word and spells it out, by consecutively adding letters until the full word is completed.
+// E.g. spelling("bee") ➞ ["b", "be", "bee"] spelling("happy") ➞ ["h", "ha", "hap", "happ", "happy"] spelling("eagerly") ➞ ["e", "ea", "eag", "eage", "eager"]
+
+// Objects
+// Write a program to list the properties of an object. E.g. const student = { firstName: "Vikram", lastName: "Patel", class: 12 }; Expected Output: firstName, lastName, class
+
+// Create a person object. Include the person's first and last name, age, job, city etc. Then print text by retrieving data from the object e.g. "Vikram Patel is a 41 year old engineer living in Mumbai".
+
+// Write a JavaScript program to delete the "class" property (or last property) from the previous object.
+
+// Write a program to get the length of a JavaScript object.
+
+// Write a program to display the reading status (i.e. display book name, author name and reading status) of the following books. const library = [ { author: 'Jean Genet', title: 'Funeral Rites', readingStatus: true }, { author: 'JG Ballard', title: 'Crash', readingStatus: true }, { author: 'B.Catling', title: 'The Erstwhile', readingStatus: false }];
+
+// E.g. Output:
+
+// Already read Funeral Rites by Jean Genet
+
+// Already read Crash by JG Ballard
+
+// You still need to read The Erstwhile by B.Catling
