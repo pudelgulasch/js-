@@ -37,7 +37,7 @@ if (third >= 20 && third <= 35) {
   console.log("This is out of range.");
 }
 
-if (thirds % 3 == 0) {
+if (third % 3 == 0) {
   console.log("Multiple of 3.");
 } else {
   console.log("Not a multiple of 3.");

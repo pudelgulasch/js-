@@ -4,11 +4,11 @@
 // console.log(parseInt(num1));
 
 // Date and Time
-// const now = Date();
+// const now = Date(); //string
 // console.log(now);
 // console.log(typeof now);
 
-// const today = new Date();
+// const today = new Date(); //object
 // console.log(today);
 // console.log(typeof today);
 
@@ -113,8 +113,10 @@
 // Example: grade("A") -> "Good job!", grade("F") -> "Failed"
 
 // const gradeNote = Math.floor(Math.random() * 6 + 1);
+// console.log(gradeNote);
+
 // const grade = ["A", "B", "C", "D", "E", "F"];
-// // console.log(grade);
+// console.log(grade);
 
 // switch (gradeNote) {
 //   case 1:
@@ -141,48 +143,20 @@
 // console.log(state);
 
 // 3. What month is it?
-// Create a function using the new Date().getMonth() method and switch case in order to return the month of the year. Return "It's the month of May!"
-// let a = new Date().getMonth();
-// console.log(a);
+// Create a function using the new Date().getMonth() method and switch case in order to return the 
+// month of the year. Return "It's the month of May!"
 
-let weekdays = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday"
-];
-let actualDay = new Date().getDay();
-console.log(actualDay);
+// const month= ["January","February","March","April","May","June","July",
+//             "August","September","October","November","December"];
+// const a = new Date().getMonth();
+// console.log(a); //5
 
-switch (actualDay) {
-  case 0:
-    state = weekdays[0];
-    break;
-  case 1:
-    state = weekdays[1];
-    break;
-  case 2:
-    state = weekdays[2];
-    break;
-  case 3:
-    state = weekdays[3];
-    break;
-  case 4:
-    state = weekdays[4];
-    break;
-  case 5:
-    state = weekdays[5];
-    break;
-  case 6:
-    state = weekdays[6];
-    break;
-  default:
-    state = "no date";
-}
-console.log(state);
+// switch (a) {
+//     case a:
+//     result =`It's the month of ${month[a]}!`;
+//     break;
+//     default: //default is always necessary
+//     result= `No month found!`
+// };
 
-// Input: Number of the Day of the weekdays
-// Output: Name of the Weekday
+// console.log(result);

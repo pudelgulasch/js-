@@ -149,3 +149,34 @@ const evenNums = num => {
   return arr;
 };
 console.log(evenNums(4));
+
+// 7. Dictionary
+// Create a function that takes in an initial word and filters out an array to contain words that start with the same letters as the initial word.
+
+// Examples
+
+// dictionary("bu", ["button", "breakfast", "border"]) ➞ ["button"]
+// dictionary("tri", ["triplet", "tries", "trip", "piano", "tree"]) ➞ ["triplet", "tries", trip"]
+// dictionary("beau", ["pastry", "delicious", "name", "boring"]) ➞ []
+// Notes
+
+// If none of the words match, return an empty array.
+// Keep the filtered array in the same relative order as the original array of words.
+// 8. is a four letter word.
+// Create a function that takes an array of strings. Return all words in the array that are exactly four letters.
+
+// Examples:
+
+// isFourLetters(["John", "James", "Jack", "Jeanne"]) ➞ ["John", "Jack"]
+// isFourLetters(["Tomato", "Corn", "Lettuce"]) ➞ ["Corn"]
+// isFourLetters(["Dog", "Cat", "Deer"]) ➞ ["Deer"]
+// 9. Is it Symmetrical?
+// Create a function that takes a number as an argument and returns true or false depending on whether the number is symmetrical or not. A number is symmetrical when it is the same as its reverse.
+
+// Examples:
+
+// isSymmetrical(7227) ➞ true
+// isSymmetrical(12567) ➞ false
+// isSymmetrical(44444444) ➞ true
+// isSymmetrical(9939) ➞ false
+// isSymmetrical(1112111) ➞ true

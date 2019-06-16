@@ -33,3 +33,117 @@ if you use quotations inside a string
 \t	tab
 \b	backspace
 \f	form feed
+
+Math Object
+rgb calculator
+let r = Math.floor(Math.random() * 256);
+let g = Math.floor(Math.random() * 256);
+let b = Math.floor(Math.random() * 256);
+console.log(`r = ${r} - g = ${g} - b = ${b}`);
+
+// new ES6 with spread syntax
+const worldCities = [...africanCities, ...africanCities];
+
+// To check if something is an array
+// console.log(Array.isArray("Hot"));
+
+// to add on the end .push(value)
+asianCities.push("Bangkok");
+
+// to add on the front .unshift(value)
+africanCities.unshift("Dar Es Salaam");
+
+// take off from the end .pop(value)
+// asianCities.pop();
+
+// take off from the end .shift()
+// asianCities.shift();
+
+// take off from the anywhere .splice
+// asianCities.splice(1, 2, "Beijing");
+
+slive vs. splice
+// var array=[1,2,3,4,5];
+// console.log(array.splice(2));
+// This will return [3,4,5]. The original array is affected resulting in array being [1,2].
+
+// var array=[1,2,3,4,5]
+// console.log(array.slice(2));
+// This will return [3,4,5]. The original array is NOT affected with resulting in array being [1,2,3,4,5].
+
+// increment +1, decrement -1 /Variablenänderung bleibt bestehen bei Weiterverwendug
+
+// typeof primitive types:
+// string
+// number
+// boolean
+// undefined
+
+// type of Complex Data types:
+// typeof types:
+// function
+// object
+
+let aVariable = "five hundred";
+console.log("9: "+isNaN(aVariable));
+
+let x = 1;
+
+while (x < 10) {
+  // evaluating to a boolean value
+  console.log("Number", x);
+  x++;
+}
+
+let numToBeMultiplied = 5;
+let i = 1; // counter
+while (i <= 10) {
+  let sum = i * numToBeMultiplied;
+  console.log(sum);
+  i++;
+}
+
+// add item to end
+
+cities.push("Utrecht");
+
+//remove last item //no args
+cities.pop();
+
+// remove first item
+cities.shift();
+
+// add item to beginning
+cities.unshift("Darsalaam");
+
+// swap with bracket notation
+cities[2] = "Skagen";
+
+// random number till 5
+let r = Math.floor(Math.random() * 5 + 1);
+
+// to check if a string is empty, "else if" is nessesary
+function isEmpty(s) {
+  if (s === "") {
+    return true;
+  } else if (s != "") {
+    return false;
+  }
+}
+
+// let x = 0;
+
+// switch (x) {
+//   case 0:
+//     // value of variable
+//     state = "OFF";
+//     break;
+//   case 1:
+//     state = "ON";
+//     break;
+//   // breaks out of
+//   default:
+//     state = "Stateless";
+// }
+
+const today = new Date(); //object, concat with .getDay etc.
