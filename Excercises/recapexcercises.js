@@ -51,27 +51,26 @@
 
 // Write a program that returns ordinal numbers (1st, 2nd, 3rd, 4th, 5th etc.)
 
-const ordinalNum = num => {
-  if (num <= 2 && num > 0) {
-    return num + "st";
-  } else num;
-};
+// const ordinalNum = num => {
+//   if (num <= 2 && num > 0) {
+//     return num + "st";
+//   } else num;
+// };
 
 // Declare a variable and sort the characters into alphabetical order.
 
-let word="haLlO";
-let alphabet=word=>{
-  let low=word.toLowerCase();
-  let arrWord=Array.from(low);
-  return arrWord.sort().toString();
-}
-console.log(alphabet(word));
+// let word = "haLlO";
+// let alphabet = word => {
+//   let low = word.toLowerCase();
+//   let arrWord = Array.from(low);
+//   return arrWord.sort().toString();
+// };
+// console.log(alphabet(word));
 
 // Write a program that takes a number (1-60) and returns a corresponding string of hyphens. Examples: (1) ➞ "-" (5) ➞ "-----" (3) ➞ "---"
 
 // const hyphens = num =>
 //   num < 0 && num <= 60 ? [...Array(num).keys.map()] : "out of range";
-
 
 // Arrays
 // Leap Years Write a program which finds the leap years in a given range of years.
@@ -79,7 +78,7 @@ console.log(alphabet(word));
 // let years=[1991,2001,1981,1983,1988,1984,1886,2005,2004];
 
 // const result = years.filter
-// (year=> year>=1980 && year<=1990 && 
+// (year=> year>=1980 && year<=1990 &&
 //   year% 4 === 0 && year % 100 != 0)
 //   .sort((a, b) => a-b);
 // console.log(result);
@@ -120,15 +119,6 @@ console.log(alphabet(word));
 // };
 // console.log(spell("bee"));
 
-// function makeTree(num) {
-//   let string = "                              *";
-//   for (let i = 0; i < num; i++) {
-//     console.log(string);
-
-//     string += "*";
-//   }
-// }
-
 // Objects
 // Write a program to list the properties of an object. E.g. const student = { firstName: "Vikram", lastName: "Patel", class: 12 }; Expected Output: firstName, lastName, class
 
@@ -160,17 +150,17 @@ const student = { firstName: "Vikram", lastName: "Patel", class: 12 };
 // const len=Object.keys(student).length;
 // console.log(len);
 
-// Write a program to display the reading status (i.e. display book name, author name and reading status) of the following books. 
+// Write a program to display the reading status (i.e. display book name, author name and reading status) of the following books.
 
-// const library = [ 
-//   { author: 'Jean Genet', 
-// title: 'Funeral Rites', 
-// readingStatus: true }, 
-// { author: 'JG Ballard', 
-// title: 'Crash', 
-// readingStatus: true }, 
-// { author: 'B.Catling', 
-// title: 'The Erstwhile', 
+// const library = [
+//   { author: 'Jean Genet',
+// title: 'Funeral Rites',
+// readingStatus: true },
+// { author: 'JG Ballard',
+// title: 'Crash',
+// readingStatus: true },
+// { author: 'B.Catling',
+// title: 'The Erstwhile',
 // readingStatus: false }];
 
 // for (let i in library) {
