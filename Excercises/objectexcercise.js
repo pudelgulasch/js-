@@ -4,12 +4,12 @@
 // 1. Check if a number is within a given range
 // Write a program that checks if a number is within the range of an object's min and max properties.
 
-const o = { min: 0, max: 5 };
-let { min, max } = o;
+const range = { min: 0, max: 5 };
+let { min, max } = range;
 console.log(min);
 
-const range = (num, { min, max }) => ;
-console.log(4, { min: 0, max: 5 });
+const inRange = num => (num <= max && num >= min ? true : false);
+console.log(inRange(10));
 
 // Examples:
 
@@ -25,6 +25,12 @@ console.log(4, { min: 0, max: 5 });
 
 // 2. Return Keys and Values
 // Write a program that takes an object and returns the keys and values in separate arrays.
+
+const obj = { a: 1, b: 2, c: 3 };
+
+const sep = obj => console.log(Object.keys(obj), Object.values(obj));
+
+console.log(sep(obj));
 
 // Examples:
 
