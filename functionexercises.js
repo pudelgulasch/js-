@@ -276,12 +276,12 @@
 
 // Bitweise-XOR-Operator verknüpft alle Bits zweier Integer-Werte nach den Regeln des logischen XOR:
 // 1 XOR 0 und 0 XOR 1 ergeben 1 und alle anderen Kombinationen ergeben 0.
-// let range={0,5};
-// let max = Math.abs(Math.max(range));
-// let min = Math.abs(Math.max(range));
+// let range=[0,5];
+// let max = Math.abs(Math.max(...range));
+// let min = Math.abs(Math.min(...range));
 
-// console.log(max);
-// console.log(min);
+// console.log("1: ",max);
+// console.log("2: ",min);
 
 // Write a function that calculates how much money someone is going to earn until the end of the week
 // by just accepting a number from 1 to 7 that represents the days of the week.
@@ -309,30 +309,30 @@
 // argument indicates that to day is Wednesday so we calculate from Wednesday (included)
 // until Sunday.With calculate RestOfWeekMoney(4) we start counting from Thursday until Sunday etc.
 
-const daysTillPay = num => {
-  let hoursDay = [4, 6, 8, 10, 0, 2, 0];
-  let weekDay = [
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-    "Sunday"
-  ];
-  let sum = 0;
-  num -= 1;
-  hoursDay.splice(0, num);
-  weekDay.splice(0, num);
-  // length counts from 0 till 7 because its the actual number of items not the indexnumbers
-  // splice cuts out from given indexnummer till item counting number
-  for (i = 0; i < hoursDay.length; i++) {
-    sum += hoursDay[i] * 10;
-  }
-  return `You've got ${weekDay.length} days to work until you get paid ${sum}.`;
-};
+// const daysTillPay = num => {
+//   let hoursDay = [4, 6, 8, 10, 0, 2, 0];
+//   let weekDay = [
+//     "Monday",
+//     "Tuesday",
+//     "Wednesday",
+//     "Thursday",
+//     "Friday",
+//     "Saturday",
+//     "Sunday"
+//   ];
+//   let sum = 0;
+//   num -= 1;
+//   hoursDay.splice(0, num);
+//   weekDay.splice(0, num);
+//   // length counts from 0 till 7 because its the actual number of items not the indexnumbers
+//   // splice cuts out from given indexnummer till item counting number
+//   for (i = 0; i < hoursDay.length; i++) {
+//     sum += hoursDay[i] * 10;
+//   }
+//   return `You've got ${weekDay.length} days to work until you get paid ${sum}.`;
+// };
 
-console.log(daysTillPay(3));
+// console.log(daysTillPay(3));
 
 // let hoursRemaining = 0;
 
@@ -400,15 +400,15 @@ console.log(daysTillPay(3));
 // you don need the return with arrow, only inside for loop
 // only curly brackets if you use a code block
 
-const hackerspeak = str =>
-  str
-    .replace(/a/gi, 4)
-    .replace(/e/gi, 3)
-    .replace(/i/gi, 1)
-    .replace(/o/gi, 0)
-    .replace(/s/gi, 5);
+// const hackerspeak = str =>
+//   str
+//     .replace(/a/gi, 4)
+//     .replace(/e/gi, 3)
+//     .replace(/i/gi, 1)
+//     .replace(/o/gi, 0)
+//     .replace(/s/gi, 5);
 
-console.log(hackerspeak("Javascript is awesome"));
+// console.log(hackerspeak("Javascript is awesome"));
 
 // The array.join() method is an inbuilt function in JavaScript which is used to join the elements of an
 // array into a string.The elements of the string will be separated by a specified separator and its default
@@ -425,12 +425,12 @@ console.log(hackerspeak("Javascript is awesome"));
 // * The . and the @ must be in the appropriate places.
 // * e.g. "john.smith@com" is invalid while "john.smith@email.com" is valid.
 
-const valid = email => {
-  let newString = [];
-  email.includes("@") ? (newString = email.split("@")) : false;
-  return newString[1] && newString[0].length > 0 && newString[1].includes(".")
-    ? true
-    : false;
+// const valid = email => {
+//   let newString = [];
+//   email.includes("@") ? (newString = email.split("@")) : false;
+//   return newString[1] && newString[0].length > 0 && newString[1].includes(".")
+//     ? true
+//     : false;
 
   // if (email.includes("@")) {
   //   newString = email.split("@");
@@ -445,8 +445,8 @@ const valid = email => {
   //   return false;
   // }
   // return false;
-};
-console.log(valid("katrinsalac@gmail.com"));
+// };
+// console.log(valid("katrinsalac@gmail.com"));
 
 // 1 pure
 // 3 variables

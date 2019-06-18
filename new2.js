@@ -1,5 +1,3 @@
-// test on Thursday
-
 // higher order functions
 
 //for each

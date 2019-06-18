@@ -41,7 +41,6 @@
 // const myHouse2 = myHouse1; // memory address 1
 // myHouse2.color = "yellow"; //
 //
-//
 // // What is colors of both houses?
 //
 // console.log(myHouse1.color);
