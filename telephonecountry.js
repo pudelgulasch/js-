@@ -22,20 +22,37 @@ let telephoneData = [
   { countryCode: "0031", country: "Holland" },
   { countryCode: "0049", country: "Germany" }
 ];
-console.log(Object.keys(telephoneData));
-console.log(Object.values(telephoneData));
 
-// telephoneData.forEach(x=>)
+// console.log(Object.keys(telephoneData));
+// console.log(Object.values(telephoneData));
 
-// var found = telephoneData.filter() => {
-//   arr = [""];
-//   for (i = 0; i < telephoneData.length; i++) {
-//     telephoneData.find(
-//         country =>
-//           Object.keys(telephoneData)[i] ===
-//           Object.values(telephoneData)[i]
-//     )
-//   return arr;
-// };
+// let myCountry = telephoneData.find(x => x.countryCode === "0030");
+// console.log(myCountry.country);
 
-// console.log(found);
+// *****************************************************
+
+// const findCountryByCode = code => {
+//   const foundCountry = telephoneData.find(countryInfo => countryInfo.countryCode === code);
+//   if (foundCountry) {
+//     return foundCountry.country;
+//   } else {
+//     return 'Country with the specific code was not found!';
+//   }
+// }
+// *****************************************************
+
+// const findCountryByCode = code => telephoneData.find(obj => obj.countryCode === code).country;
+
+// console.log(findCountryByCode("0049"));
+
+// //ES5
+// function whichCountry5(code) {
+//   return telephoneData.find(function(obj) {
+//     return obj.countryCode === code;
+//   }).country;
+// }
+// console.log(whichCountry5("0031"));
+// //ES6
+// const whichCountry6 = code =>
+//   telephoneData.find(obj => obj.countryCode === code).country;
+// console.log(whichCountry6("0031"));
