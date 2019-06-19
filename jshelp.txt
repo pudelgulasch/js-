@@ -143,3 +143,18 @@ var can only be declared once, and can be overwritten globally + locally from fu
 using the const declaration only prevents reassignment of the variable identifier.
 
 Object.freeze(obj); to ensure not reassignment
+
+https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Basics
+
+https://bitsofco.de/for-in-vs-for-of/
+
+https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Array
+
+However, it is generally advised that for..in not be used with Arrays, particularly because it cannot 
+be guaranteed that the iteration happens in sequence, which is usually important for Arrays.
+
+enumerable - zählbar
+iterable - wiederholbar
+
+The for..of loop works well with Arrays and Strings, as they are iterable. 
+This method is a more reliable way of looping through an Array in sequence.
