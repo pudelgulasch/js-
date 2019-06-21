@@ -4,12 +4,12 @@
 // 1. Check if a number is within a given range
 // Write a program that checks if a number is within the range of an object's min and max properties.
 
-const range = { min: 0, max: 5 };
-let { min, max } = range;
-console.log(min);
+// const range = { min: 0, max: 5 };
+// let { min, max } = range;
+// console.log(min);
 
-const inRange = num => (num <= max && num >= min ? true : false);
-console.log(inRange(10));
+// const inRange = num => (num <= max && num >= min ? true : false);
+// console.log(inRange(10));
 
 // Examples:
 
@@ -26,14 +26,14 @@ console.log(inRange(10));
 // 2. Return Keys and Values
 // Write a program that takes an object and returns the keys and values in separate arrays.
 
-const obj = { a: 1, b: 2, c: 3 }; //is an array because of {}
-const sep = obj => console.log(Object.keys(obj), Object.values(obj));
-console.log(sep(obj));
+// const obj = { a: 1, b: 2, c: 3 }; //is an array because of {}
+// const sep = obj => console.log(Object.keys(obj), Object.values(obj));
+// console.log(sep(obj));
 
-//or
-const { a, b, c } = myArr;
-console.log(Object.keys(myArr));
-console.log(Object.values(myArr));
+// //or
+// const { a, b, c } = myArr;
+// console.log(Object.keys(myArr));
+// console.log(Object.values(myArr));
 
 // Examples:
 
@@ -58,7 +58,7 @@ let scores = [
 ];
 
 let scoreMax = 0;
-for (let i of score) {
+for (let i of scores) {
   scoreMax += i.score;
 }
 console.log(scoreMax);
@@ -66,8 +66,8 @@ console.log(scoreMax);
 // 4. Is it an empty object?
 // Write a program that returns true if an object is empty, and false if otherwise.
 
-let obj = {};
-Object.keys(obj).length === 0 ? console.log(true) : console.log(false);
+// let obj = {};
+// Object.keys(obj).length === 0 ? console.log(true) : console.log(false);
 
 // Examples:
 

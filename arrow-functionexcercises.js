@@ -77,7 +77,10 @@ console.log("6: ", calcArea(rad));
 
 // 7. The Inventors
 // Given the following array, complete the tasks below.
-
+// inventors[0].first
+// array[]
+// object{}
+// to excess the keys in an array of objects
 const inventors = [
   {
     first: "Albert",

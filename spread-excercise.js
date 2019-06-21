@@ -56,13 +56,13 @@ console.log(employee);
 // depending on whether the average of all the arguments is a whole number or not.
 
 let array2 = [9, 2, 2, 4];
+const sum = (a, b, c, d) => a + b + c + d;
 
-const isWhole = (...args) => {
-  const sum = (a, b, c, d) => a + b + c + d;
-  return (sum(...args) % args.length) % 2 === 0 ? true : false;
-};
+// const isWhole = (...args) => {
+//   return (sum(...args) % args.length) % 2 === 0 ? true : false;
+// };
 
-console.log(isWhole(array2));
+console.log(sum(array2));
 
 // Examples
 
@@ -82,9 +82,6 @@ console.log(isWhole(array2));
 // minRemovals(5, 7, 9, 11) ➞ 0 removals
 // minRemovals(5, 7, 9, 12) ➞ 1 removal
 
-// const minRemovals = (...args) => args.filter(([...args] % 2 === 0) => [...args]+1);
-// console.log(minRemovals(5, 7, 9, 12));
-
-
-
-%2===0
+const minRemovals = (...args) =>
+  sum(...args) % 2 != 0 ? sum(...args) + 1 : sum(...args);
+console.log(minRemovals(5, 7, 9, 12));

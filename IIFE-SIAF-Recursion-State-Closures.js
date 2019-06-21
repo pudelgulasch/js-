@@ -85,11 +85,11 @@
 // IIFE = immeditaly invoked function expression, also called:
 // SIAF = self invoked anonymous function
 
-// console.log(
-//   (function() {
-//     return "hello";
-//   })()
-// );
+console.log(
+  (function() {
+    return "hello";
+  })()
+);
 // // parentesis at the end invoking the function
 
 // console.log(
@@ -102,11 +102,11 @@
 //   let foo = "bar";
 //   console.log(foo);
 // })();
-
-// (() => {
-//   let foo = "bar";
-//   console.log(foo);
-// })();
+// no functionname or argument nessecsary
+(() => {
+  let foo = "bar";
+  console.log(foo);
+})();
 
 // (function() {
 //   let x = 10;

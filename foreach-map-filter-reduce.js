@@ -1,27 +1,38 @@
 // higher order functions
 
-//for each
+//for each one after another, so it neads you can t stack it (put in on eachother)
+//for map-maped together
 //the for Each Method Executes a provided function once for each array element
 
 //function outputs =(item,index, array )
 
-const arr = [1, 2, 3, 4, 5];
+// const arr = [1, 2, 3, 4, 5];
+// let arr2 = [];
 
-arr.forEach(number => console.log(number * 2)); //is a callback or:
-// let num2 = arr.forEach(number => number * 2);
-// console.log(num2);
+// arr.forEach(number => arr2.push(number * 2));
+// console.log(arr2);
+
+// console.log(arr.map(x => x < 5));
+
+// arr.forEach(number => console.log(number * 2));
 
 // arr.forEach(function(num, id, array) {
 //   console.log(`${id + 1}:${num}-${array}`);
 // });
 
+// let newMap = arr.map(function(num, id, array) {
+//   return `${id + 1}:${num}-${array}`;
+// });
+
+// console.log(newMap);
+
 // const stuff = ["my stuff", "whatever", "your stuff"];
 // stuff.forEach((list, id) => console.log(`${id + 1}-${list}`));
 
-//For loop
+// For loop
 
-const items = ["item1", "item2", "item3"];
-const copy = [];
+// const items = ["item1", "item2", "item3"];
+// const copy = [];
 // for (let i = 0; i < items.length; i++) {
 //   copy.push(items[i]);
 // }
@@ -29,13 +40,13 @@ const copy = [];
 
 // for each
 
-// items.forEach(function(item) {
+// items.forEach(function(x, x, item) {
 //   copy.push(item);
 // });
 
 // console.log(copy);
 
-const cities = ["Lima", "Montevideo", "Rio de Janero", "Sao Paulo", "Santiago"];
+// const cities = ["Lima", "Montevideo", "Rio de Janero", "Sao Paulo", "Santiago"];
 
 // cities.forEach((city, index) => {
 //   if (city === "Sao Paulo") {
@@ -48,7 +59,7 @@ const cities = ["Lima", "Montevideo", "Rio de Janero", "Sao Paulo", "Santiago"];
 
 // cities.forEach((city, index) => {
 //   if (city === "Montevideo") {
-//     //scipts Montevideo
+//     scipts Montevideo
 //     return;
 //   }
 //   console.log(index + 1, city);
@@ -60,7 +71,7 @@ const cities = ["Lima", "Montevideo", "Rio de Janero", "Sao Paulo", "Santiago"];
 //keep in mind that the resulting array will always be the same length as the original array
 
 // const array = [2, 3, 10, 20];
-// const map1 = array.map(x => x * 2); //creates new array
+// const map1 = array.map(item => item * 2); //creates new array
 // console.log(map1);
 
 // let newArr = array.map((val, index, array) => {
@@ -117,56 +128,57 @@ const cities = ["Lima", "Montevideo", "Rio de Janero", "Sao Paulo", "Santiago"];
 // });
 // console.log(countries);
 
-//Reduce
+// Reduce
 
-//the reduce() method executes a reduce function (that we provide) on each element in an array,
-//resulting in a single value
+// the reduce() method executes a reduce function (that we provide) on each element in an array,
+// resulting in a single value
 
-//let result=array.reduce (callback)
+// let result=array.reduce (callback)
 // optionally we can specifiy an initial value
 
 // sums all values in an array
 // const array1 = [1, 2, 3, 4];
-// const reducer = array1.reduce((total, num) => total + num); //total = accumulator, num=currentValue, see chart on md
-
+// const reducer = array1.reduce((acc, val) => acc + val, 0); //acc = accumulator, val=currentValue, see chart on md
+// acc = result, so no need for += // 0 defines the data type output (acc)
 // console.log(reducer); //10
 
-const numbers = [165, 44, 22, 8];
+// const numbers = [165, 44, 22, 8];
 // let solution = numbers.reduce((acc, val) => acc - val);
 // console.log(solution);
 
-//specifying an intital value
+// specifying an intital value
 // let sum = numbers.reduce((acc, val) => {
 //   return acc + val;
 // }, 100);
+// acc starts with 100
 
 // console.log(sum);
 
-// const names = [
-//   "Kim",
-//   "Bob",
-//   "Tupac",
-//   "Kim",
-//   "Ed",
-//   "Bob",
-//   "Tupac",
-//   "Ed",
-//   "Fred",
-//   "Sal",
-//   "Bob",
-//   "Sal"
-// ];
+const names = [
+  "Kim",
+  "Bob",
+  "Tupac",
+  "Kim",
+  "Ed",
+  "Bob",
+  "Tupac",
+  "Ed",
+  "Fred",
+  "Sal",
+  "Bob",
+  "Sal"
+];
+//allNames is the acc, acc as Object
+const countInstances = names.reduce((allNames, name) => {
+  if (name in allNames) {
+    allNames[name]++; //increments the existing property
+  } else {
+    allNames[name] = 1; //creates a property and assings al value of 1
+  }
+  return allNames;
+}, {}); //the value starts as an empty object
 
-// const countInstances = names.reduce((allNames, name) => {
-//   if (name in allNames) {
-//     allNames[name]++; //increments the existing property
-//   } else {
-//     allNames[name] = 1; //creates a property and assings al value of 1
-//   }
-//   return allNames;
-// }, {}); //the value starts as an empty object
-
-// console.log(countInstances);
+console.log(countInstances);
 
 // const countedNames = {};
 // for (let i = 0; i < names.length; i++) {

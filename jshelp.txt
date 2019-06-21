@@ -158,3 +158,7 @@ iterable - wiederholbar
 
 The for..of loop works well with Arrays and Strings, as they are iterable. 
 This method is a more reliable way of looping through an Array in sequence.
+
+for in property names
+for of property values
+
