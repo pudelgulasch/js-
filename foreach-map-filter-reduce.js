@@ -26,8 +26,8 @@
 
 // console.log(newMap);
 
-// const stuff = ["my stuff", "whatever", "your stuff"];
-// stuff.forEach((list, id) => console.log(`${id + 1}-${list}`));
+const stuff = ["my stuff", "whatever", "your stuff"];
+stuff.forEach((list, id) => console.log(`${id + 1}-${list}`));
 
 // For loop
 
@@ -82,15 +82,15 @@
 // });
 // console.log(newArr);
 
-// let arr = [1, 2, 3, 4, 5, 6];
-// let newArr = arr.map((val, index) => {
-//   if (val % 2 === 0) {
-//     return val * 5;
-//   } else {
-//     return val;
-//   }
-// });
-// console.log(newArr);
+let arr = [1, 2, 3, 4, 5, 6];
+let newArr = arr.map((val, index) => {
+  if (val % 2 === 0) {
+    return val * 5;
+  } else {
+    return val;
+  }
+});
+console.log(newArr);
 
 //filter
 //the filter() methods creates a new array with all elements that pass the test implemented by three
@@ -137,10 +137,10 @@
 // optionally we can specifiy an initial value
 
 // sums all values in an array
-// const array1 = [1, 2, 3, 4];
-// const reducer = array1.reduce((acc, val) => acc + val, 0); //acc = accumulator, val=currentValue, see chart on md
-// acc = result, so no need for += // 0 defines the data type output (acc)
-// console.log(reducer); //10
+const array1 = [1, 2, 3, 4];
+const reducer = array1.reduce((acc, val) => acc + val, 0); //acc = accumulator, val=currentValue, see chart on md
+//acc = result, so no need for += // 0 defines the data type output (acc)
+console.log(reducer); //10
 
 // const numbers = [165, 44, 22, 8];
 // let solution = numbers.reduce((acc, val) => acc - val);

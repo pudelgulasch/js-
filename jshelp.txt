@@ -162,3 +162,44 @@ This method is a more reliable way of looping through an Array in sequence.
 for in property names
 for of property values
 
+item,id,array
+
+let scores = [
+  { tile: "N", score: 1 },
+  { tile: "K", score: 5 },
+  { tile: "Z", score: 10 },
+  { tile: "X", score: 8 },
+  { tile: "D", score: 2 },
+  { tile: "A", score: 1 },
+  { tile: "E", score: 1 }
+];
+
+let scoreMax = 0;
+for (let i of scores) {
+  scoreMax += i.score;
+}
+console.log(scoreMax);
+
+// const myHouse1 = {color: "blue"}; // memory address 1
+// const myHouse2 = myHouse1; // memory address 1
+
+// RegExp to find digits in a string, zum Beispiel \d finds a digit from 0-9
+let x = /\d/;
+// You can use a replace regular expression.
+
+// s/[;,\t\r ]|[\n]{2}/\n/g
+// s/ at the beginning means a search
+// The characters between [ and ] are the characters to search for (in any order)
+// The second / delimits the search-for text and the replace text
+// In English, this reads:
+
+// "Search for ; or , or \t or \r or  (space) or exactly two sequential \n and replace it with \n"
+
+// In C#, you could do the following: (after importing System.Text.RegularExpressions)
+
+// Regex pattern = new Regex("[;,\t\r ]|[\n]{2}");
+// pattern.Replace(myString, "\n");
+
+const isSymmetrical = num => num.toString().split("").reverse().join("") == num;
+
+console.log(isSymmetrical(1112111));

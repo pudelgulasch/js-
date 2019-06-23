@@ -51,3 +51,6 @@ val = str.match("zxh"); //null
 //includes() / returns boolean
 val = str.includes("e"); //true
 // console.log(val);
+
+//startsWith() /returns booleam
+val=str.startsWith("los"); 
