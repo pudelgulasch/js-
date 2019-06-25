@@ -1,6 +1,7 @@
 // Q1. forEach-log
 // Write a function that uses the forEach array method to log out every member of an array to the console.
-// The function should only take in one argument, the array. The function should NOT use a traditional for loop.
+// The function should only take in one argument, the array. The function should NOT use a traditional
+// for loop.
 
 const members = ["Ida", "Anna", "Elisa", "Phillip"];
 const everyMember = members.forEach(item => console.log("Q1: ", item));
@@ -33,23 +34,25 @@ console.log("Q3: ", filterEvens);
 // Write a function called forEachSum that takes in an array of numbers as an argument and returns a sum of the array.
 // The function should use the forEach array method and should NOT use for loop or while loop.
 
-// const forEachSum = [22, 2, 31, 110, 6, 13].forEach((int, i, array) => {
-//   let sum = 0;
-//   sum[i]+=item;
-//   console.log(sum);
-// });
+let sum = 0;
+const arrNum4 = [22, 2, 31, 110, 6, 13];
+const forEachSum = arrNum4.forEach((int, i, array) => {
+  sum += int;
+});
+console.log("Q4: ", sum);
 
 // Q5. implement-forEach
 // Write a function called forEach that takes in two arguments: an array and a function.
-// forEach should apply the passed in function to every member of the array. It should not return anything.
+// forEach should apply the passed in function to every member of the array. It should not
+// return anything.
 
-// var arr = [1,2,3,4,5];
-// function log(val) {
-//   console.log(val);
-// }
-// const forEach=(array,function())=> array.forEach(item => function(item));
+let arr2 = [1, 2, 3, 4, 5];
+function num(arr2) {
+  return;
+}
+const forEach = (arr, fun) => arr.forEach(item => console.log(fun(item)));
 
-// console.log("Q5: ",forEach(arr, log()));
+console.log("Q5: ", forEach(arr2, num));
 
 // Example:
 
@@ -87,13 +90,18 @@ console.log("Q7: ", stringsToNums);
 // Write a function that accepts a string as a parameter and converts the first letter of each word
 // of the string in upper case. However, do not use a for loop, while loop, or forEach.
 
-// let str = "the quick brown fox";
-// const upper = ({ ...str }) => {
-//   // console.log(Object.values(str));
-//   // let bln = str.search(" ");
-//   return str;
-// };
-// console.log(upper(str));
+let str = "the quick brown fox";
+const upper = str => {
+  let spl = str.split(" ");
+  console.log(spl);
+  spl.map((item,i)=>
+
+  // console.log(Object.values(str));
+  // let bln = str.search(" ");
+  return spl;
+};
+
+console.log(upper(str));
 
 // Example string : 'the quick brown fox'
 // Expected Output : 'The Quick Brown Fox '
@@ -121,8 +129,8 @@ console.log("Q9: ", map(arr, double));
 
 let arrNum = [1, 2, 3, 4, 5];
 
-const sum = arrNum.reduce((acc, num) => acc + num, 0);
-console.log("Q10: ", sum);
+const sum2 = arrNum.reduce((acc, num) => acc + num, 0);
+console.log("Q10: ", sum2);
 
 // Examples:
 
