@@ -135,18 +135,22 @@ const checkDrinkingAge = arr3.filter((item, i) => {
 // Write a function named sort that takes in an array of numbers and sorts them in order from lowest to highest.
 // Do not use the built in .sort array method in your answer.
 
-// const sort = arr =>
-//   arr.map((item, i) => {
-//     let num = parseInt(item);
-//     let result = Math.min(num);
-//     let arr = [];
-//     arr.push(result);
-//     return arr;
-//   });
+let arr2 = [11, 2, 36, 4, 15]
+let sortedNum={};
 
-// const sort = arr => arr.filter((item, i, array) => console.log(Math.min(item)));
-// console.log(sort([11, 2, 36, 4, 15]));
-// d;
+const num2=(val,i,array)=>{
+  console.log(array);
+  
+  console.log(Math.min(array));
+  // console.log(sortedNum);
+  
+}
+
+const sort2 = (arr,fun) =>
+  arr.forEach((val,i,array) => fun(val,i,array));
+
+  console.log(sort2(arr2,num2));
+
 // Examples:
 
 // sort([11, 2, 36, 4, 15]);  // returns [2, 4, 11, 15, 36]

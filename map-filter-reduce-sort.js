@@ -16,6 +16,7 @@ console.log("2: ", sum);
 // Examples:
 // sum([1,2,3,4,5]); //returns 15
 // sum([6,7,7]); //returns 20
+
 // 3. instanceOf
 // Reduce
 // Sum up the instances of each of these:
@@ -110,34 +111,27 @@ console.log("5: ", findSquare);
 const countLetter = str => {
   let arr = str.split("");
   let rObj = {};
-  arr.reduce((obj, val) => {
-    if (val in obj) {
-      obj[val]++;
-    } else obj[val] = 1;
-    return (obj = rObj);
-  }, {});
-  return rObj;
+  arr.forEach((val) => {
+    // if (val in obj) {
+    //   obj[val]++;
+    // } else obj[val] = 1;
+    // return (obj = rObj);
+    rObj[val]=(rObj[val]||0)+1;
+  // },{});
+})
+return rObj;
 }; //acc set as object output {}
 
 console.log("6: ", countLetter("Hallo"));
 
+// const counting = data.reduce((obj, val) => {
+//   if (val in obj) {
+//     obj[val]++;
+//   } else obj[val] = 1;
+//   return obj;
+// }, {}); //acc set as object output {}
+
 // console.log("3: ", counting);
-
-// const countLetters = str => {
-//   let arr = str.split("");
-//   arr.map(char => {
-//     let rObj={}
-//     rObj[char]
-//   }
-//   let newArray = originalArray.map(obj => {
-//     let rObj = {};
-//     rObj[obj.key] = obj.name;
-//     return rObj;
-//   });
-//   console.log("10: ", newArray);
-// };
-
-//counting like a=1,b=2 etc. /spread operator
 
 // 7. List of Movies
 // Given the code below, complete the task
