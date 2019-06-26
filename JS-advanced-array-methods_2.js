@@ -50,8 +50,11 @@ let arr2 = [1, 2, 3, 4, 5];
 function num(arr2) {
   return;
 }
-const forEach = (arr, fun) => arr.forEach(item => console.log(fun(item)));
-
+const forEach = (arr, fun) =>
+  arr.forEach(item => {
+    // console.log(fun(item));
+    return fun(item);
+  });
 console.log("Q5: ", forEach(arr2, num));
 
 // Example:
@@ -93,15 +96,13 @@ console.log("Q7: ", stringsToNums);
 let str = "the quick brown fox";
 const upper = str => {
   let spl = str.split(" ");
-  console.log(spl);
-  spl.map((item,i)=>
-
-  // console.log(Object.values(str));
-  // let bln = str.search(" ");
-  return spl;
+  let result = spl.map(
+    item => item[0].toUpperCase() + item.substring(1, item.length)
+  );
+  return result;
 };
 
-console.log(upper(str));
+console.log("Q8: ", upper(str));
 
 // Example string : 'the quick brown fox'
 // Expected Output : 'The Quick Brown Fox '
@@ -157,18 +158,18 @@ console.log("Q11: ", reduceMin(arrNum2));
 // that contain the number of odd numbers in the array, and the number of the even
 // numbers in the array, respectively. Do not use a for loop, while loop, or forEach.
 
-const arrNum3 = [11, 2, 36, 4, 15];
+// const arrNum3 = [11, 2, 36, 4, 15];
 
-const countOddsAndEvens = arrNum3.reduce((acc, val) => {
-  let even = 0;
-  let odd = 0;
-  if (val % 2 === 0) {
-    console.log((even += acc[val]++));
-  } else console.log((odd = [val]));
-  return acc;
-}, {});
+// const countOddsAndEvens = arrNum3.reduce((acc, val) => {
+//   let even = 0;
+//   let odd = 0;
+//   if (val % 2 === 0) {
+//     console.log((even += acc[val]++));
+//   } else console.log((odd = [val]));
+//   return acc;
+// }, {});
 
-console.log(countOddsAndEvens);
+// console.log(countOddsAndEvens);
 
 // function countBy(arr, fn) {
 //   return arr.reduce(function(acc, val) {

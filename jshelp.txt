@@ -206,3 +206,5 @@ console.log(isSymmetrical(1112111));
 
 A parameter is the variable which is part of the method’s signature (method declaration). 
 n argument is an expression used when calling the method.
+
+http://javascript.info/comparison

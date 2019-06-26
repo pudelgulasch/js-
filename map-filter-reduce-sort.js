@@ -107,8 +107,35 @@ console.log("5: ", findSquare);
 // 6. Instances of Letters
 // Create a function that takes a string as an argument and counts the number of each letter in that string.
 
-const countLetters = str => str.length;
-console.log("6: ", countLetters("Hallo"));
+const countLetter = str => {
+  let arr = str.split("");
+  let rObj = {};
+  arr.reduce((obj, val) => {
+    if (val in obj) {
+      obj[val]++;
+    } else obj[val] = 1;
+    return (obj = rObj);
+  }, {});
+  return rObj;
+}; //acc set as object output {}
+
+console.log("6: ", countLetter("Hallo"));
+
+// console.log("3: ", counting);
+
+// const countLetters = str => {
+//   let arr = str.split("");
+//   arr.map(char => {
+//     let rObj={}
+//     rObj[char]
+//   }
+//   let newArray = originalArray.map(obj => {
+//     let rObj = {};
+//     rObj[obj.key] = obj.name;
+//     return rObj;
+//   });
+//   console.log("10: ", newArray);
+// };
 
 //counting like a=1,b=2 etc. /spread operator
 

@@ -31,7 +31,7 @@ const sortStr = str => {
   return spli
     .sort()
     .toString()
-    .replace(/,/gi, "");
+    .replace(/,/g, "");
 };
 console.log("Q3: ", sortStr("hello"));
 
@@ -60,7 +60,7 @@ const reverseStr = str => {
   return spli
     .reverse()
     .toString()
-    .replace(/,/gi, "");
+    .replace(/,/g, "");
 };
 
 console.log("Q5: ", reverseStr("hello"));
