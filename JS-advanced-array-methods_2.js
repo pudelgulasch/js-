@@ -36,7 +36,7 @@ console.log("Q3: ", filterEvens);
 
 let sum = 0;
 const arrNum4 = [22, 2, 31, 110, 6, 13];
-const forEachSum = arrNum4.forEach((int) => {
+const forEachSum = arrNum4.forEach(int => {
   sum += int;
 });
 console.log("Q4: ", sum);
