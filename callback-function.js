@@ -87,29 +87,30 @@ function myMap(myarr, callback) {
 // Array.prototype.map = myMap;
 
 // filter method
-// function myFilter(myarr, callback) {
-//   let arr = [];
-//   for (let i = 0; i < myarr.length; i++) {
-//     arr.push(callback(myarr[i]));
-//   }
-//   return arr;
-// }
-// console.log(
-//   myMap(someArray, x => {
-//     if (x > 2) {
-//       return x;
-//     } else return someArray.pop();
-//   })
-// );
+let someArray = [5, 4, 3, 2, 1];
+function myFilter(myarr, callback) {
+  myarr.sort((a, b) => a - b);
+  let arr = [];
+  for (let i = 0; i < myarr.length; i++) {
+    arr.push(callback(myarr[i]));
+  }
+  return arr;
+}
+console.log(
+  myMap(someArray, x => {
+    if (x > 2) {
+      return x;
+    } else return someArray.pop();
+  })
+);
 
 // reduce
-let someArray = [1, 2, 3, 4, 5];
-myReduce = (myArr, callback) => {
-  let result = 0;
-  for (let i = 0; i < myArr.length; i++) {
-    if (callback(myArr[i])) result += myArr[i];
-  }
-  return result;
-};
+// myReduce = (myArr, callback) => {
+//   let result = 0;
+//   for (let i = 0; i < myArr.length; i++) {
+//     if (callback(myArr[i])) result += myArr[i];
+//   }
+//   return result;
+// };
 
-console.log(myReduce(someArray, x => someArray.length));
+// console.log(myReduce(someArray, x => someArray.length));

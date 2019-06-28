@@ -2,8 +2,9 @@
 // Write a function named sortArrNum that takes in an array of numbers and returns the array sorted
 // from lowest to highest.
 
-const sortArrNum = [3, 5, 7, 1, 9, 0].sort((a, b) => a - b);
-console.log("Q1: ", sortArrNum);
+const arrNum = [3, 5, 17, 1, 9, 0];
+const sortArrNum = arr => arr.sort((a, b) => a - b);
+console.log("Q1: ", sortArrNum(arrNum));
 
 // Examples:
 
@@ -13,7 +14,7 @@ console.log("Q1: ", sortArrNum);
 // Write a function named sortArrStr that takes in an array of strings and returns the array
 // sorted alphabetically.
 
-const animals = ["cat", "elephant", "dog", "walrus"];
+const animals = ["ab", "cat", "aa", "elephant", "dog", "walrus"];
 
 const sortArrStr = arr => arr.sort();
 console.log("Q2: ", sortArrStr(animals));
@@ -26,13 +27,12 @@ console.log("Q2: ", sortArrStr(animals));
 // Write a function named sortStr that takes in a string and returns a string of the letters
 // sorted alphabetically.
 
-const sortStr = str => {
-  let spli = str.split("");
-  return spli
-    .sort()
-    .toString()
-    .replace(/,/g, "");
-};
+const sortStr = str => [...str].sort().join("");
+// {
+
+//   let spli = str.split("");
+//   return spli.sort().join("");
+// };
 console.log("Q3: ", sortStr("hello"));
 
 // Examples:
@@ -55,13 +55,7 @@ console.log("Q4: ", arrReverse([1, 2, 3, 4, 5]));
 // Write a function called reverseStr that uses the reverse method to reverse a string and
 // return the reversed string. Do NOT use a typical loop; just use the reverse method.
 
-const reverseStr = str => {
-  let spli = str.split("");
-  return spli
-    .reverse()
-    .toString()
-    .replace(/,/g, "");
-};
+const reverseStr = str => [...str].reverse().join("");
 
 console.log("Q5: ", reverseStr("hello"));
 
@@ -82,16 +76,17 @@ const obj = [
   { name: "young thug" }
 ];
 
-const sortObjs = arr =>
-  arr.sort((a, b) => {
-    let nameA = a.name.toLowerCase(),
-      nameB = b.name.toLowerCase();
-    if (nameA < nameB)
-      //sort string ascending
-      return -1;
-    if (nameA > nameB) return 1;
-    return 0; //default return value (no sorting)
-  });
+const sortObjs = arr => arr.sort((a, b) => (a.name > b.name ? 1 : -1));
+
+// arr.sort((a, b) => {
+//   let nameA = a.name.toLowerCase(),
+//     nameB = b.name.toLowerCase();
+//   if (nameA < nameB)
+//     //sort string ascending
+//     return -1;
+//   if (nameA > nameB) return 1;
+//   return 0; //default return value (no sorting)
+// });
 console.log("Q6: ", sortObjs(obj));
 
 // Examples:
@@ -123,9 +118,9 @@ const arr3 = [
   { name: "Lil", age: 20 }
 ];
 
-const checkDrinkingAge = arr3.filter((item, i) => {
-  console.log("Q8: ", item.age[i] >= 21 ? true : false);
-});
+//Johnys solution
+const checkDrinkingAge2 = obj => obj.every(x => x.age >= 21);
+console.log("Q8: ", checkDrinkingAge2(arr3));
 
 // Examples:
 // checkDrinkingAge([{name: "Adrian", age: 33}, {name: "Jojo", age: 23}, {name: "Cornelius", age: 26}]);  // returns true
@@ -135,21 +130,19 @@ const checkDrinkingAge = arr3.filter((item, i) => {
 // Write a function named sort that takes in an array of numbers and sorts them in order from lowest to highest.
 // Do not use the built in .sort array method in your answer.
 
-let arr2 = [11, 2, 36, 4, 15]
-let sortedNum={};
+let arr2 = [11, 2, 36, 4, 15];
+let sortedNum = {};
 
-const num2=(val,i,array)=>{
+const num2 = (val, i, array) => {
   console.log(array);
-  
+
   console.log(Math.min(array));
   // console.log(sortedNum);
-  
-}
+};
 
-const sort2 = (arr,fun) =>
-  arr.forEach((val,i,array) => fun(val,i,array));
+const sort2 = (arr, fun) => arr.forEach((val, i, array) => fun(val, i, array));
 
-  console.log(sort2(arr2,num2));
+console.log(sort2(arr2, num2));
 
 // Examples:
 

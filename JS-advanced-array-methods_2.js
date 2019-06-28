@@ -47,15 +47,11 @@ console.log("Q4: ", sum);
 // return anything.
 
 let arr2 = [1, 2, 3, 4, 5];
-function num(arr2) {
-  return;
+function log(val) {
+  console.log("Q5: ", val);
 }
-const forEach = (arr, fun) =>
-  arr.forEach(item => {
-    // console.log(fun(item));
-    return fun(item);
-  });
-console.log("Q5: ", forEach(arr2, num));
+const forEach = arr => arr.forEach(log);
+forEach(arr2);
 
 // Example:
 
@@ -75,13 +71,7 @@ console.log("Q6: ", triple(integers));
 // and returns a new array containing those numbers. Use the map array method,
 // do not use any traditional loops.
 
-// const stringsToNums = (...arr) => arr.map(str => parseInt(str));
-
-let stringsToNums = ["4", "3", "9"].map(str => {
-  let nums = 0;
-  nums = parseInt(str);
-  return nums;
-});
+let stringsToNums = ["4", "3", "9"].map(str => parseInt(str));
 
 console.log("Q7: ", stringsToNums);
 
@@ -117,7 +107,7 @@ let arr = [1, 2, 3, 4, 5];
 function double(num) {
   return num * 2;
 }
-const map = (arr, fun) => arr.map(obj => fun(obj));
+const map = (arr, fun) => arr.map(fun);
 console.log("Q9: ", map(arr, double));
 
 // Example:
@@ -130,20 +120,21 @@ console.log("Q9: ", map(arr, double));
 
 let arrNum = [1, 2, 3, 4, 5];
 
-const sum2 = arrNum.reduce((acc, num) => acc + num, 0);
-console.log("Q10: ", sum2);
+const sum2 = arr => arrNum.reduce((acc, num) => acc + num, 0);
+console.log("Q10: ", sum2(arrNum));
 
 // Examples:
 
 // sum([1,2,3,4,5]); //returns 15
 // sum([6,7,7]); //returns 20
+
 // Q11. reduce-min
 // Write a function called reduceMin that uses the reduce to return the minimum number
 // in an array of numbers. Do NOT use a typical loop; just use the reduce method.
 
-let arrNum2 = [6, 7, 7, 4];
+let arrNum2 = [1, 6, 7, 4];
 
-const reduceMin = arr => arr.reduce((acc, num) => Math.max(acc, num));
+const reduceMin = arr => arr.reduce((acc, val) => Math.min(acc, val));
 console.log("Q11: ", reduceMin(arrNum2));
 
 // Examples:
@@ -158,18 +149,18 @@ console.log("Q11: ", reduceMin(arrNum2));
 // that contain the number of odd numbers in the array, and the number of the even
 // numbers in the array, respectively. Do not use a for loop, while loop, or forEach.
 
-const arrNum3 = [11, 2, 36, 4, 15];
+// const arrNum3 = [11, 2, 36, 4, 15];
 
-const countOddsAndEvens = arrNum3.map((obj, val) => {
-  let even = {};
-  let odd = {};
-  if (val % 2 === 0) {
-    even.push(obj + val);
-  } else odd.push(obj + val);
-  return obj;
-});
+// const countOddsAndEvens = arrNum3.map((obj, val) => {
+//   let even = {};
+//   let odd = {};
+//   if (val % 2 === 0) {
+//     even.push(obj + val);
+//   } else odd.push(obj + val);
+//   return obj;
+// });
 
-console.log(countOddsAndEvens);
+// console.log(countOddsAndEvens);
 
 // let arr2 = [1, 2, 3, 4, 5];
 // function num(arr2) {

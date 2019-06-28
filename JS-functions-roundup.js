@@ -6,24 +6,14 @@
 // write a function (or series of functions) that takes in an array that contains numbers,
 // and returns the sum of all the even numbers
 
-// let arrOfNum = [5, 4, 3, 2, 1];
+let arrOfNum = [5, 4, 3, 2, 1];
 
-// function filterEven(myarr, callback) {
-//   let arr = [];
-//   myarr.filter(val => {
-//     val % 2 === 0;
-//     return arr.push(val);
-//   });
-//   //   {
-//   // arr.push(callback(myarr[i++]));
-//   //   }
-//   //   return arr;
-// }
-// console.log(filterEven(arrOfNum));
-//   filterEven(arrOfNum, x => {
-//     if (x % 2 === 0) return x;
-//   })
-// );
+function filterEven(myarr, callback) {
+  let arr = myarr.filter(val => val % 2 === 0);
+  return arr.reduce((acc, val) => acc + val);
+}
+
+console.log(filterEven(arrOfNum));
 
 // Examples:
 
@@ -32,18 +22,15 @@
 
 // Input: [9, 11, 13, 15, 17, 2, 4]
 // Output: 6
+
 // 2.
 // write a function (or series of functions) that takes in an array that contains strings,
 // and returns an array with the number of letters in each string
 
-// let arr2 = ["hey", "hi", "hello"];
-// let newArr2 = {};
-// const letCount = arr => {
-//   console.log(arr2.length);
-//   arr2.forEach((val, i, array) => array[val]);
-//   return newArr2;
-// };
-// console.log(letCount(arr2));
+let arr2 = ["hey", "hi", "hello"];
+
+const letCount = arr => arr.map(val => val.length);
+console.log(letCount(arr2));
 
 // Examples:
 
@@ -52,8 +39,19 @@
 
 // Input: ['this', 'is', 'a', 'longer', 'array']
 // Output: [4, 2, 1, 6, 5]
+
 // 3.
-// write a function (or series of functions) that takes in an array that can contain both words and numbers, and returns the sum of all the even numbers
+// write a function (or series of functions) that takes in an array that can contain both words and
+// numbers, and returns the sum of all the even numbers
+
+let arrNumWords = [2, "hey", 5, "hi", 6];
+const returnEven2 = arr => {
+  let arr2 = arr
+    .filter(val => val.length % 2 === 0 || val % 2 === 0)
+    .map(val => val[1].length);
+  return arr2;
+};
+console.log(returnEven2(arrNumWords));
 
 // Examples:
 
