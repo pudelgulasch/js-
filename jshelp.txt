@@ -208,3 +208,19 @@ A parameter is the variable which is part of the method’s signature (method de
 n argument is an expression used when calling the method.
 
 http://javascript.info/comparison
+
+filter doesn`t work with tenary 
+
+const myHometown = {
+  city: "Berlin",
+  country: "Germany",
+  population: 357500000,
+  isCold: true,
+  newcomers: function(x) {
+    return this.population + x;
+  }
+};
+
+for (let x in myHometown) {
+  console.log(`${x}-${myHometown[x]}`);
+}

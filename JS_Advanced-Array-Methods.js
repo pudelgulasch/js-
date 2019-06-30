@@ -130,19 +130,23 @@ console.log("Q8: ", checkDrinkingAge2(arr3));
 // Write a function named sort that takes in an array of numbers and sorts them in order from lowest to highest.
 // Do not use the built in .sort array method in your answer.
 
-let arr2 = [11, 2, 36, 4, 15];
-let sortedNum = {};
+arr = [2, 8, 3, 12, 6, 10, 4, 1];
+function quicksort(arr){
+    if(arr.length === 0) return arr;
+    let left = [];
+    let right = [];
+    let pivot = arr[0];
+    arr.forEach(function(num, index){
+        if(index > 0) {
+             if(num < pivot) left.push(num);
+             else right.push(num);
+        }
+    })
 
-const num2 = (val, i, array) => {
-  console.log(array);
+    return quicksort(left).concat(pivot, quicksort(right));
+}
 
-  console.log(Math.min(array));
-  // console.log(sortedNum);
-};
-
-const sort2 = (arr, fun) => arr.forEach((val, i, array) => fun(val, i, array));
-
-console.log(sort2(arr2, num2));
+console.log("Q9: ",quicksort(arr));
 
 // Examples:
 

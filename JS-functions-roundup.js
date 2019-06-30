@@ -13,7 +13,7 @@ function filterEven(myarr, callback) {
   return arr.reduce((acc, val) => acc + val);
 }
 
-console.log(filterEven(arrOfNum));
+console.log("1: ",filterEven(arrOfNum));
 
 // Examples:
 
@@ -30,7 +30,7 @@ console.log(filterEven(arrOfNum));
 let arr2 = ["hey", "hi", "hello"];
 
 const letCount = arr => arr.map(val => val.length);
-console.log(letCount(arr2));
+console.log("2: ",letCount(arr2));
 
 // Examples:
 
@@ -46,12 +46,12 @@ console.log(letCount(arr2));
 
 let arrNumWords = [2, "hey", 5, "hi", 6];
 const returnEven2 = arr => {
-  let arr2 = arr
-    .filter(val => val.length % 2 === 0 || val % 2 === 0)
-    .map(val => val[1].length);
+  let arr2=arr.filter(val => val.length % 2 === 0 || val % 2 === 0)
+    .map(val => typeof val!="number" ? val.length:val)
+    .reduce((acc,val)=>acc+val)
   return arr2;
 };
-console.log(returnEven2(arrNumWords));
+console.log("3: ",returnEven2(arrNumWords));
 
 // Examples:
 
@@ -60,8 +60,17 @@ console.log(returnEven2(arrNumWords));
 
 // Input: [9, 'cya', 5, 'goodbye', 'later, 10, 20]
 // Output: 30
-// 4.
-// write a function (or series of functions) that takes in an array that an contain strings or numbers, and returns the sums of the length of all of the words (in other words, returns the sum of the total number of letters in all of the words combined)
+
+// 4. Write a function (or series of functions) that takes in an array that an contain strings or numbers, 
+// and returns the sums of the length of all of the words (in other words, returns the sum of the total number 
+// of letters in all of the words combined)
+
+let arrWords= ['hey', 2, 'hi', 4, 'hello']
+const charCount=arr=>{
+let arr2=arr.map(val=> typeof val==="string"? val.length : 0).reduce((acc,val)=>acc+val)
+return arr2}
+console.log("4: ",charCount(arrWords));
+
 
 // Examples:
 
@@ -71,17 +80,69 @@ console.log(returnEven2(arrNumWords));
 // Input: ['this', 5, 'is', 7, 'a', 'longer', 10, 'array']
 // Output: 18
 // 5.
-// write a function (or series of functions) that takes in an array of strings, and returns an object with the vowel count of all of the strings combined
+// write a function (or series of functions) that takes in an array of strings, and returns an object 
+// with the vowel count of all of the strings combined
+
+let arrWords2=['hey', 2, 'hi', 4, 'hello']
+const vowelCount=(arr)=>{
+let vowels=["a","e","i","o","u"];
+let arr2=arr
+.filter(val=> typeof val==="string")
+.map(val=> val.match(/[a,e,i,o,u]/gi))
+.join()
+.split(",")
+.concat(vowels)
+.sort()
+.reduce((acc, val)=> {
+  if (val in acc) {
+    acc[val]++;
+  }
+  else {
+    acc[val] = 0;
+  }
+  return acc;
+},{})
+return arr2
+}
+
+console.log("5: ",vowelCount(arrWords2));
 
 // Examples:
 
-// Input: ['hey', 'hi', 'hello']
+// Input: ['hey', 2, 'hi', 4, 'hello']
 // Output: {'a': 0, 'e': 2, 'i': 1, 'o': 1, 'u': 0}
 
 // Input: ['this', 'is', 'a', 'longer', 'array']
 // Output: {'a': 3, 'e': 1, 'i': 2, 'o': 1, 'u': 0}
+
 // 6.
-// write a function (or series of functions) that takes in an array of numbers, and returns an object with a count of the number of even numbers and number of odd numbers in the array
+// write a function (or series of functions) that takes in an array of numbers, and returns an object 
+// with a count of the number of even numbers and number of odd numbers in the array
+
+function countBy(arr, fn) {
+  let oddCount = 0
+  let evenCount = 0
+  return arr.reduce(function(acc, nums) {
+    // console.log(nums);
+    // console.log(nums, fn(nums))
+    if (fn(nums) === "even") {
+      evenCount++;
+      acc['even'] = evenCount;
+    } else {
+      oddCount++;
+      acc['odd'] = oddCount;
+    }
+    return acc
+  }, {}, 0)
+
+}
+
+function evenOdd(n) {
+  if (n % 2 === 0) return "even";
+  else return "odd";
+}
+let nums = [1, 2, 3, 4, 5];
+console.log("6: ",countBy(nums, evenOdd));
 
 // Examples:
 
@@ -93,6 +154,16 @@ console.log(returnEven2(arrNumWords));
 // 7.
 // write a function (or series of functions) that takes in an array of numbers, and returns an array of only the unique numbers
 
+let arrNums3=[3, 3, 3, 4, 4, 4, 5, 6, 7, 7, 7];
+let search=new Set(arrNums3);
+console.log(search);
+const distinct=(val,i,array)=> ; 
+console.log(distinct);
+const unique=arr=>arr.filter(distinct);
+console.log(unique(arrNums3));
+// console.log(arrNums3[0].match(0));
+
+
 // Examples:
 
 // Input: [1, 1, 2, 3, 4, 5, 6, 3]
@@ -102,6 +173,8 @@ console.log(returnEven2(arrNumWords));
 // Output: [5, 6]
 // 8.
 // write a function (or series of functions) that takes in a string of words, capitalizes the last letter of every word, removes any word that has an even amount of letters, and returns a string.
+
+
 
 // Examples:
 

@@ -149,16 +149,16 @@ console.log("Q11: ", reduceMin(arrNum2));
 // that contain the number of odd numbers in the array, and the number of the even
 // numbers in the array, respectively. Do not use a for loop, while loop, or forEach.
 
-// const arrNum3 = [11, 2, 36, 4, 15];
+const arrNum3 = [11, 2, 36, 4, 15];
 
-// const countOddsAndEvens = arrNum3.map((obj, val) => {
-//   let even = {};
-//   let odd = {};
-//   if (val % 2 === 0) {
-//     even.push(obj + val);
-//   } else odd.push(obj + val);
-//   return obj;
-// });
+const countOddsAndEvens = arrNum3.map((obj, val) => {
+  let even = {};
+  let odd = {};
+  if (val % 2 === 0) {
+    even.push(obj + val);
+  } else odd.push(obj + val);
+  return obj;
+});
 
 // console.log(countOddsAndEvens);
 
@@ -173,18 +173,18 @@ console.log("Q11: ", reduceMin(arrNum2));
 //   });
 // console.log("Q5: ", forEach(arr2, num));
 
-// function countBy(arr, fn) {
-//   return arr.reduce(function(acc, val) {
-//     let key = fn(nums);
-//     if (!acc[key]) {
-//       acc[key] = 1;
-//     } else {
-//       acc[key]++;
-//     }
-//     return acc;
-//   }, {});
-// }
+function countBy(arr, fn) {
+  return arr.reduce(function(acc, val) {
+    let key = fn(nums);
+    if (!acc[key]) {
+      acc[key] = 1;
+    } else {
+      acc[key]++;
+    }
+    return acc;
+  }, {});
+}
 // Examples:
-
+console.log(countBy([11, 2, 36, 4, 15]))
 // countOddsAndEvens([11, 2, 36, 4, 15]);  // returns {odds: 2, evens: 3}
 // countOddsAndEvens([1, 2, 3, 4, 5, 5, 99, 101]);  // returns {odds: 6, evens: 2}
