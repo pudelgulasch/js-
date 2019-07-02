@@ -45,3 +45,4 @@ class Person2 extends Person {
 const hildegard = new Person2("Hildegard", "Meier", 86, "Austrian");
 console.log(hildegard.greeting());
 console.log(hildegard.age);
+console.log(Person.firstname); // undefined because extends only copys features
