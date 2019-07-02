@@ -224,3 +224,6 @@ const myHometown = {
 for (let x in myHometown) {
   console.log(`${x}-${myHometown[x]}`);
 }
+'this' javaScript keyword that points to  the execution context
+
+Hardcode?

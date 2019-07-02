@@ -13,7 +13,7 @@ function filterEven(myarr, callback) {
   return arr.reduce((acc, val) => acc + val);
 }
 
-console.log("1: ",filterEven(arrOfNum));
+console.log("1: ", filterEven(arrOfNum));
 
 // Examples:
 
@@ -30,7 +30,7 @@ console.log("1: ",filterEven(arrOfNum));
 let arr2 = ["hey", "hi", "hello"];
 
 const letCount = arr => arr.map(val => val.length);
-console.log("2: ",letCount(arr2));
+console.log("2: ", letCount(arr2));
 
 // Examples:
 
@@ -46,12 +46,13 @@ console.log("2: ",letCount(arr2));
 
 let arrNumWords = [2, "hey", 5, "hi", 6];
 const returnEven2 = arr => {
-  let arr2=arr.filter(val => val.length % 2 === 0 || val % 2 === 0)
-    .map(val => typeof val!="number" ? val.length:val)
-    .reduce((acc,val)=>acc+val)
+  let arr2 = arr
+    .filter(val => val.length % 2 === 0 || val % 2 === 0)
+    .map(val => (typeof val != "number" ? val.length : val))
+    .reduce((acc, val) => acc + val);
   return arr2;
 };
-console.log("3: ",returnEven2(arrNumWords));
+console.log("3: ", returnEven2(arrNumWords));
 
 // Examples:
 
@@ -61,16 +62,18 @@ console.log("3: ",returnEven2(arrNumWords));
 // Input: [9, 'cya', 5, 'goodbye', 'later, 10, 20]
 // Output: 30
 
-// 4. Write a function (or series of functions) that takes in an array that an contain strings or numbers, 
-// and returns the sums of the length of all of the words (in other words, returns the sum of the total number 
+// 4. Write a function (or series of functions) that takes in an array that an contain strings or numbers,
+// and returns the sums of the length of all of the words (in other words, returns the sum of the total number
 // of letters in all of the words combined)
 
-let arrWords= ['hey', 2, 'hi', 4, 'hello']
-const charCount=arr=>{
-let arr2=arr.map(val=> typeof val==="string"? val.length : 0).reduce((acc,val)=>acc+val)
-return arr2}
-console.log("4: ",charCount(arrWords));
-
+let arrWords = ["hey", 2, "hi", 4, "hello"];
+const charCount = arr => {
+  let arr2 = arr
+    .map(val => (typeof val === "string" ? val.length : 0))
+    .reduce((acc, val) => acc + val);
+  return arr2;
+};
+console.log("4: ", charCount(arrWords));
 
 // Examples:
 
@@ -80,32 +83,31 @@ console.log("4: ",charCount(arrWords));
 // Input: ['this', 5, 'is', 7, 'a', 'longer', 10, 'array']
 // Output: 18
 // 5.
-// write a function (or series of functions) that takes in an array of strings, and returns an object 
+// write a function (or series of functions) that takes in an array of strings, and returns an object
 // with the vowel count of all of the strings combined
 
-let arrWords2=['hey', 2, 'hi', 4, 'hello']
-const vowelCount=(arr)=>{
-let vowels=["a","e","i","o","u"];
-let arr2=arr
-.filter(val=> typeof val==="string")
-.map(val=> val.match(/[a,e,i,o,u]/gi))
-.join()
-.split(",")
-.concat(vowels)
-.sort()
-.reduce((acc, val)=> {
-  if (val in acc) {
-    acc[val]++;
-  }
-  else {
-    acc[val] = 0;
-  }
-  return acc;
-},{})
-return arr2
-}
+let arrWords2 = ["hey", 2, "hi", 4, "hello"];
+const vowelCount = arr => {
+  let vowels = ["a", "e", "i", "o", "u"];
+  let arr2 = arr
+    .filter(val => typeof val === "string")
+    .map(val => val.match(/[a,e,i,o,u]/gi))
+    .join()
+    .split(",")
+    .concat(vowels)
+    .sort()
+    .reduce((acc, val) => {
+      if (val in acc) {
+        acc[val]++;
+      } else {
+        acc[val] = 0;
+      }
+      return acc;
+    }, {});
+  return arr2;
+};
 
-console.log("5: ",vowelCount(arrWords2));
+console.log("5: ", vowelCount(arrWords2));
 
 // Examples:
 
@@ -116,25 +118,28 @@ console.log("5: ",vowelCount(arrWords2));
 // Output: {'a': 3, 'e': 1, 'i': 2, 'o': 1, 'u': 0}
 
 // 6.
-// write a function (or series of functions) that takes in an array of numbers, and returns an object 
+// write a function (or series of functions) that takes in an array of numbers, and returns an object
 // with a count of the number of even numbers and number of odd numbers in the array
 
 function countBy(arr, fn) {
-  let oddCount = 0
-  let evenCount = 0
-  return arr.reduce(function(acc, nums) {
-    // console.log(nums);
-    // console.log(nums, fn(nums))
-    if (fn(nums) === "even") {
-      evenCount++;
-      acc['even'] = evenCount;
-    } else {
-      oddCount++;
-      acc['odd'] = oddCount;
-    }
-    return acc
-  }, {}, 0)
-
+  let oddCount = 0;
+  let evenCount = 0;
+  return arr.reduce(
+    function(acc, nums) {
+      // console.log(nums);
+      // console.log(nums, fn(nums))
+      if (fn(nums) === "even") {
+        evenCount++;
+        acc["even"] = evenCount;
+      } else {
+        oddCount++;
+        acc["odd"] = oddCount;
+      }
+      return acc;
+    },
+    {},
+    0
+  );
 }
 
 function evenOdd(n) {
@@ -142,7 +147,7 @@ function evenOdd(n) {
   else return "odd";
 }
 let nums = [1, 2, 3, 4, 5];
-console.log("6: ",countBy(nums, evenOdd));
+console.log("6: ", countBy(nums, evenOdd));
 
 // Examples:
 
@@ -151,18 +156,79 @@ console.log("6: ",countBy(nums, evenOdd));
 
 // Input: [10, 10, 10, 5, 5, 5, 5]
 // Output: {'evens': 3, 'odds': 4}
+
 // 7.
-// write a function (or series of functions) that takes in an array of numbers, and returns an array of only the unique numbers
+// write a function (or series of functions) that takes in an array of numbers,
+// and returns an array of only the unique numbers
 
-let arrNums3=[3, 3, 3, 4, 4, 4, 5, 6, 7, 7, 7];
-let search=new Set(arrNums3);
-console.log(search);
-const distinct=(val,i,array)=> ; 
-console.log(distinct);
-const unique=arr=>arr.filter(distinct);
-console.log(unique(arrNums3));
+// let search = new Set(arrNums3);
+// console.log(search);
+// const distinct = (val, i, array) => arrNums3.toString().match(/val/g);
+// console.log(distinct);
+// console.log(arrNums3.toString().match(/val/g));
+let arrNums3 = [3, 3, 3, 4, 4, 4, 5, 6, 7, 7, 7];
+const countByNum = (arr, x) => {
+  let result = arr.reduce((allNums, num) => {
+    if (Object.values(allNums) === 1) {
+      allNums[num] = 1;
+    } else {
+      allNums[num] = 0;
+    }
+    return allNums;
+  }, {});
+  return result;
+};
+
+// for (i = 0; i < result.length; i++) {
+//   console.log(result);
+
+// if result[]
+// return result.x > 1 ? Object.keys(x) : 0;
+
+// const unique = (arr, fun) => arr.map((v, i, a) => fun(a));
+
+// console.log(unique(arrNums3, countByNum));
+console.log(countByNum(arrNums3, 0));
+
+// const unique = arr => arr.filter((v, i, a) => a.indexOf(v) == i);
+// const unique = arr => arr.map((v, i, a) => a.match);
+// console.log(unique(arrNums3));
+
+// const unique = arr => arrNums3.map((v, i, a) =>{
+//   if (a.indexOf(v, i + 1))
+// };
+
+// console.log(unique(arrNums3));
+
+// var array = ["a", "b", "a", "c", "a", "d"];
+// var indices = [];
+// var element = "a";
+// var idx = array.indexOf(element);
+// while (idx != -1) {
+//   indices.push(idx);
+//   idx = array.indexOf(element, idx + 1);
+// }
+// console.log(indices);
+
+// const unique=arr=>{
+// let result={};
+// for (let i=0;i<a.length;i++){
+// for (let j=0;j<i;j++){
+//    if (a[i] == a[j]) {
+//     // isUnique = true;
+
+//     break;
+//   }
+// }}
+// console.log(unique());
+
+// if (isUnique) {
+//   console.log(printIn(a[i] + " "));
+// }
+// }
+// const unique = arr => arr.filter(distinct);
+// console.log(unique(arrNums3));
 // console.log(arrNums3[0].match(0));
-
 
 // Examples:
 
@@ -171,17 +237,19 @@ console.log(unique(arrNums3));
 
 // Input: [3, 3, 3, 4, 4, 4, 5, 6, 7, 7, 7]
 // Output: [5, 6]
+
 // 8.
-// write a function (or series of functions) that takes in a string of words, capitalizes the last letter of every word, removes any word that has an even amount of letters, and returns a string.
-
-
+// write a function (or series of functions) that takes in a string of words, capitalizes the last letter of every word,
+// removes any word that has an even amount of letters, and returns a string.
 
 // Examples:
 
 // Input: 'hey how do you feel today'
 // Output: 'heY hoW yoU todaY'
+
 // 9.
-// write a function (or series of functions) that takes in an array of numbers, squares every number, removes all numbers that's square is even, converts every number to a string, and returns an array.
+// write a function (or series of functions) that takes in an array of numbers, squares every number, removes all numbers
+// that's square is even, converts every number to a string, and returns an array.
 
 // Examples:
 
