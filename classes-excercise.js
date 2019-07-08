@@ -46,6 +46,8 @@ class Clock {
   constructor({ template }, timer) {
     this.template = template;
     this.timer = timer;
+    this.start=start;
+    this.stop=stop;
 }
         this.stop = function() {
           clearInterval(this.timer);
