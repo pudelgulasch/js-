@@ -59,36 +59,3 @@ getMovies(movieList2);
 
 // returns the the keys of an objects as an array
 console.log(Object.keys(movieList2));
-
-// JS DATA TYPES
-
-// --objects (as complex as you want)
-// function, arrays {}
-
-// -- PRIMITIVES
-//     - number
-//     - string
-//     - boolean
-//     - undefined
-//     - null -null(nothing)
-//     - Symbol
-
-// if its not a primitives, its an OBJECT
-// PRIMITIVES are the building blocks of objects
-
-// // COMPARISONS
-
-// console.log(true === false); //false
-// console.log(1 === 1); //true
-// console.log(1001 === 1001); //true
-
-// Primitives - if it looks the same, its probably the same
-
-// console.log({} === {}); //false
-
-// when you create an object, JS saves it at a unique location in memorys
-// when you compare primitives, JS only compares the value
-// comparing OBJECTS, we refer to REFERENCIES - JS only cares about the reference in memory
-
-const myHouse = {};
-console.log(myHouse === myHouse);

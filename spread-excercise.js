@@ -1,15 +1,18 @@
 // Spread Operator
 // 1. Combining Arrays
-// Create two arrays. e.g. euroCountries and asianCountries. Add asianCountries items to the end of euroCountries array.
+// Create two arrays. e.g. euroCountries and asianCountries. Add asianCountries items to the end of
+// euroCountries array.
 // Once again create two arrays. Add the items of one array to the beginning of the second array.
 // Create another array. Include another array as one of the elements.
 
 const euroCities = ["Paris", "Amsterdam", "Berlin", "Rome"];
 const asianCities = ["Busan", "Taipei", "Kuala Lumpur", "Osaka"];
-
-// const cities = [...euroCities, ...asianCities];
-// console.log(cities);
-
+const anotherArray = ["this", "that"];
+// const direc1 = [...euroCities, ...asianCities];
+// console.log(direc1);
+// const direc2 = [...asianCities, ...euroCities];
+// console.log(direc2);
+const three = [...re];
 // 2. Copying Arrays
 // Copy an array using the spread operator. Store the copied array in another variable.
 

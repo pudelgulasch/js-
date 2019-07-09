@@ -1,3 +1,5 @@
+// Math Object
+
 let num1 = 50;
 let num2 = 100;
 
@@ -6,7 +8,7 @@ let val;
 val = Math.PI.toFixed(2);
 // Pi Number till Index 2
 val = Math.E;
-
+//
 val = Math.round(2.4999999);
 // rounds to the nearest integer
 val = Math.ceil(198.0001);

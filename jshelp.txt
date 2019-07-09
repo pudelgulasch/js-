@@ -382,5 +382,75 @@ the same "recipe" as any other instance of Animal.
 Der instanceof Operator prüft, ob ein Objekt die prototype Eigenschaft einer Konstruktorfunktion in 
 seiner Prototypenkette besitzt.
 
+// spread syntax
+// spread syntax allows an interable such as an array or string to be expanded
+// interable - has an index, repeats
 
+"Array" is subclass, or sub-prototype, of "Object". So "Array" inherits all features from "Object".
+"Array" is not a new data type. "Array" and "Object" are sharing the same data type "object".
+The "typeof" operator on an "Array" object returns "object".
+The "instanceof" operator on an "Array" object matches "Array". It also matches "Object", because "Array" is a subclass of "Object".
+An object of "Object" can have indexed properties using the same syntax as "Array" objects.
+An object of "Object" is not an object of "Array".
+An object of "Array" is also an object of "Object".
 
+// const sum = (a, b, c) => a + b + c;
+// const nums = [1, 2, 3];
+
+// const mcs = ["Biggie", "Tupac", "Jay-Z"];
+// // // const mcs2 = mcs;
+// // const mcs2 = [...mcs];
+// // mcs.push("Snoop");
+// // // mcs2 and msc share the same adress, with spread syntax it's a copy
+// const legends = [...mcs2, ...mcs]; // instead of concat
+
+const team = "Fantastic15";
+const splitTeam = team.split(""); //or [...team];
+
+// if its not a primitive, its an OBJECT
+// PRIMITIVES are the building blocks of OBJECTS
+
+console.log(true === false); //1 & 0
+console.log(1 === 1); // true
+console.log(1001 === 1001); //true
+
+console.log({} === {}); // false because of unqiue adress
+
+default values 
+let square = function(num = 10) {
+  //10 as default
+  console.log("7: ", num);
+};
+square();
+
+function numArgs() {
+  return arguments.length;
+}
+
+const obj = [
+  { name: "lesane" },
+  { name: "sean" },
+  { name: "kendrick" },
+  { name: "christopher" },
+  { name: "young thug" }
+];
+
+const sortObjs = arr => arr.sort((a, b) => (a.name > b.name ? 1 : -1));
+
+arr = [2, 8, 3, 12, 6, 10, 4, 1];
+function quicksort(arr) {
+  if (arr.length === 0) return arr;
+  let left = [];
+  let right = [];
+  let pivot = arr[0];
+  arr.forEach(function(num, index) {
+    if (index > 0) {
+      if (num < pivot) left.push(num);
+      else right.push(num);
+    }
+  });
+
+  return quicksort(left).concat(pivot, quicksort(right));
+}
+// Pivot = Schlüsselfgur, Drehpunkt
+console.log("Q9: ", quicksort(arr));
