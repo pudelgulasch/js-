@@ -454,3 +454,43 @@ function quicksort(arr) {
 }
 // Pivot = Schlüsselfgur, Drehpunkt
 console.log("Q9: ", quicksort(arr));
+
+A primitive value is a value that has no properties or methods.
+
+A primitive data type is data that has a primitive value.
+
+JavaScript defines 5 types of primitive data types:
+
+string
+number
+boolean
+null
+undefined
+
+Primitive values are immutable (they are hardcoded and therefore cannot be changed).
+
+Methods are actions that can be performed on objects.
+
+Object properties can be both primitive values, other objects, and functions.
+
+An object method is an object property containing a function definition.
+
+JavaScript objects are containers for named values, called properties and methods.
+
+There are different ways to create new objects:
+
+Define and create a single object, using an object literal.
+Define and create a single object, with the keyword new.
+Define an object constructor, and then create objects of the constructed type.
+
+Object Prototypes
+Date objects, Array objects, and Person objects inherit from Object.prototype.
+To add a new property to a constructor, you must add it to the constructor function bzw. to the con. itself
+
+Sometimes you want to add new properties (or methods) to all existing objects of a given type.
+
+Sometimes you want to add new properties (or methods) to an object constructor.
+A method is a function stored as a property.
+
+
+e.g. Person.prototype.nationality = "English";

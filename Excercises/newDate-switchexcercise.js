@@ -4,38 +4,38 @@
 // console.log(parseInt(num1));
 
 // Date and Time
-// const now = Date(); //string
-// console.log(now);
-// console.log(typeof now);
+const now = Date(); //string
+console.log("1: ", now);
+console.log("2: ", typeof now);
 
-// const today = new Date(); //object
-// console.log(today);
-// console.log(typeof today);
+const today = new Date(); //object
+console.log("3: ", today);
+console.log("4: ", typeof today);
 
-// const rightNow = new Date().getMonth() + 1;
-// console.log(rightNow);
+const rightNow = new Date().getMonth() + 1;
+console.log("5: ", rightNow);
 
-// console.log(typeof new Date());
+console.log("6: ", typeof new Date());
 
-// const year = new Date().getFullYear();
-// console.log(year);
+const year = new Date().getFullYear();
+console.log("7: ", year);
 
-// // Date=string new Date=object
-// // methods only work with object so newDate().getDay()
-// // .binds it to function ()calling it
+// Date=string new Date=object
+// methods only work with object so newDate().getDay()
+// .binds it to function ()calling it
 
-// const hours = new Date().getHours();
-// console.log(hours);
-// console.log(typeof hours);
+const hours = new Date().getHours();
+console.log("8: ", hours);
+console.log("9: ", typeof hours);
 
-// const day = new Date().getDay();
-// console.log(day);
+const day = new Date().getDay();
+console.log("10: ", day);
 
-// // const now = new Date().getDate();
+const now2 = new Date().getDate();
 
-// const now = new Date().setDate(20);
-// // Number of miliseconds
-// console.log(now);
+const now3 = new Date().setDate(20);
+// Number of miliseconds
+console.log("11: ", now3);
 
 // const months1 = new Date().getMonth() + 1;
 // console.log(months1);
@@ -143,7 +143,7 @@
 // console.log(state);
 
 // 3. What month is it?
-// Create a function using the new Date().getMonth() method and switch case in order to return the 
+// Create a function using the new Date().getMonth() method and switch case in order to return the
 // month of the year. Return "It's the month of May!"
 
 // const month= ["January","February","March","April","May","June","July",

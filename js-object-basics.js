@@ -118,6 +118,7 @@
 // console.table(nightKing);
 
 // calculate average
+
 class Person {
   constructor(firstName, lastName, html, css, js) {
     this.firstName = firstName;
