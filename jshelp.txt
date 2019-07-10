@@ -485,12 +485,59 @@ Define an object constructor, and then create objects of the constructed type.
 
 Object Prototypes
 Date objects, Array objects, and Person objects inherit from Object.prototype.
-To add a new property to a constructor, you must add it to the constructor function bzw. to the con. itself
+To add a new property to a constructor, you must add it to the constructor function 
+bzw. to the con. itself
 
 Sometimes you want to add new properties (or methods) to all existing objects of a given type.
 
 Sometimes you want to add new properties (or methods) to an object constructor.
+
 A method is a function stored as a property.
 
 
 e.g. Person.prototype.nationality = "English";
+
+var person1 = {
+  fullName: function() {
+    return this.firstName + " " + this.lastName;
+  }
+}
+var person2 = {
+  firstName:"John",
+  lastName: "Doe",
+}
+person1.fullName.call(person2);  // Will return "John Doe"
+Person.prototype.name = function() {
+  return this.firstName + " " + this.lastName;
+};
+
+The JavaScript this keyword refers to the object it belongs to.
+
+It has different values depending on where it is used:
+
+In a method, this refers to the owner object.
+Alone, this refers to the global object.
+In a function, this refers to the global object.
+In a function, in strict mode, this is undefined.
+In an event, this refers to the element that received the event.
+Methods like call(), and apply() can refer this to any object.
+
+Note that when we use strict mode, this holds the value of undefined in global functions and 
+in anonymous functions that are not bound to any object.
+
+this is not assigned a value until an object invokes the function where this is defined
+
+Keywords are tokens that have special meaning in JavaScript: break, case, catch e.g.
+
+You create objects out of the constructor, which can be modifined via dot notation unlike constructors 
+there you need prototype or add it directly
+
+When using spread, you are expanding a single variable into more:
+When using rest arguments, you are collapsing all remaining arguments of a function into one array:
+
+function sum( first, ...others ) {
+    for ( var i = 0; i < others.length; i++ )
+        first += others[i];
+    return first;
+}
+console.log(sum(1,2,3,4))// sum(1, 2, 3, 4) == 10;
