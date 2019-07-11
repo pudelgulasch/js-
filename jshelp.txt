@@ -541,3 +541,33 @@ function sum( first, ...others ) {
     return first;
 }
 console.log(sum(1,2,3,4))// sum(1, 2, 3, 4) == 10;
+
+// class AllSpecies {
+//   constructor(species, numOfEyes, numOfLegs, haveTail) {
+//     this.species = species;
+//     this.numOfEyes = numOfEyes;
+//     this.numOfLegs = numOfLegs;
+//     this.haveTail = haveTail;
+//   }
+// }
+
+// class Tiger extends AllSpecies {
+//   constructor(colorFur, eyeColor, region, eatMeat) {
+//     super("Tiger", 2, 4, true);
+//     this.colorFur = colorFur;
+//     this.eyeColor = eyeColor;
+//     this.region = region;
+//     this.eatMeat = eatMeat;
+//   }
+// }
+
+// class BengalTiger extends Tiger {
+//   constructor(name, age, height, length, gender) {
+//     super("orange-black", "brown", "India", true);
+//     this.name = name;
+//     this.age = age;
+//     this.height = height;
+//     this.lentgh = length;
+//     this.gender = gender;
+//   }
+// }
