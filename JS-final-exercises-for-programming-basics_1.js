@@ -15,3 +15,13 @@ const caesarCipher = (str, num) => {
 
 caesarCipher("hello", 1); // returns "ifmmp"
 // caesarCipher("dog", 3); // returns "grj"
+
+// let numToBeMultiplied = 5;
+// let i = 1; // counter
+// while (i <= 10) {
+//   let sum = i * numToBeMultiplied;
+//   console.log(sum);
+//   i++;
+// }
+
+//array find

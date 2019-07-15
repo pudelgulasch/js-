@@ -28,3 +28,11 @@ class Change {
 }
 let newBuy = new Change(5, 20, money);
 newBuy.coins();
+
+// let numToBeMultiplied = 5;
+// let i = 1; // counter
+// while (i <= 10) {
+//   let sum = i * numToBeMultiplied;
+//   console.log(sum);
+//   i++;
+// }
