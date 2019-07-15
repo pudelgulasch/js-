@@ -14,10 +14,8 @@ val = x > 10 && y < 200;
 val = x == 10 || y == 5;
 val = x == 8 || y == 7;
 
-// The NOT operator returns FALSE for TRUE statements and FALSE statments
+// The NOT operator returns FALSE for TRUE statements and FALSE statements
 
 val = x != 30;
 val = !(x < 100);
 console.log(val);
-
-

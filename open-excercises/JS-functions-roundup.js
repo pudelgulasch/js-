@@ -8,11 +8,8 @@
 
 let arrOfNum = [5, 4, 3, 2, 1];
 
-function filterEven(myarr, callback) {
-  let arr = myarr.filter(val => val % 2 === 0);
-  return arr.reduce((acc, val) => acc + val);
-}
-
+const filterEven = arr =>
+  arr.filter(x => x % 2 === 0).reduce((acc, val) => acc + val);
 console.log("1: ", filterEven(arrOfNum));
 
 // Examples:
@@ -45,14 +42,28 @@ console.log("2: ", letCount(arr2));
 // numbers, and returns the sum of all the even numbers
 
 let arrNumWords = [2, "hey", 5, "hi", 6];
-const returnEven2 = arr => {
-  let arr2 = arr
+const returnEven2 = arr =>
+  arr
     .filter(val => val.length % 2 === 0 || val % 2 === 0)
     .map(val => (typeof val != "number" ? val.length : val))
     .reduce((acc, val) => acc + val);
-  return arr2;
-};
+
 console.log("3: ", returnEven2(arrNumWords));
+
+// const returnEven3 = arr =>
+//   arr
+//     .map(val =>
+//       typeof val != "number"
+//         ? val.length % 2 !== 0
+//           ? (val = 0)
+//           : val.length
+//         : val % 2 !== 0
+//         ? (val = 0)
+//         : val
+//     )
+//     .reduce((acc, val) => acc + val);
+
+// console.log("3: ", returnEven3(arrNumWords));
 
 // Examples:
 
@@ -67,12 +78,11 @@ console.log("3: ", returnEven2(arrNumWords));
 // of letters in all of the words combined)
 
 let arrWords = ["hey", 2, "hi", 4, "hello"];
-const charCount = arr => {
-  let arr2 = arr
+const charCount = arr =>
+  arr
     .map(val => (typeof val === "string" ? val.length : 0))
     .reduce((acc, val) => acc + val);
-  return arr2;
-};
+
 console.log("4: ", charCount(arrWords));
 
 // Examples:
@@ -91,11 +101,11 @@ const vowelCount = arr => {
   let vowels = ["a", "e", "i", "o", "u"];
   let arr2 = arr
     .filter(val => typeof val === "string")
-    .map(val => val.match(/[a,e,i,o,u]/gi))
+    .map(val => val.match(/[aeiou]/gi))
     .join()
     .split(",")
     .concat(vowels)
-    .sort()
+    .sort() //[ 'a', 'e', 'e', 'e', 'i', 'i', 'o', 'o', 'u' ]
     .reduce((acc, val) => {
       if (val in acc) {
         acc[val]++;

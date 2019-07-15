@@ -571,3 +571,6 @@ console.log(sum(1,2,3,4))// sum(1, 2, 3, 4) == 10;
 //     this.gender = gender;
 //   }
 // }
+
+// spread syntax allows an interable such as an array or string to be expanded
+// interable - has an index, repeats
