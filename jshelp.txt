@@ -574,3 +574,67 @@ console.log(sum(1,2,3,4))// sum(1, 2, 3, 4) == 10;
 
 // spread syntax allows an interable such as an array or string to be expanded
 // interable - has an index, repeats
+
+// Object constructors are useful when we want to create mutiple objects that share similar
+// properties or methods
+
+// FOR IN LOOPS
+
+const euroCapitals = {
+  Germany: "Berlin",
+  Italy: "Rome",
+  Denmark: "Copenhagen",
+  Sweden: "Stockholm"
+};
+
+for (const prop in euroCapitals) {
+  console.log(`The capital of ${prop} is ${euroCapitals[prop]}.`);
+}
+
+const obj2 = { one: 1, two: 2, three: 3 };
+let total = 0;
+
+for (const prop in obj2) {
+  total += obj2[prop];
+}
+console.log(total);
+
+
+class Rabbit extends Animal {
+  constructor(name, earLength) {
+    super(name); // gets it from Animal
+    this.earLength = earLength;
+  }
+}
+ 
+super only nessesary if you add new arguments
+
+
+const arr1 = [1, 2, 3, 4];
+const arr2 = new Array(1, 2, 3, 4);
+
+console.log(arr2);
+
+console.log(Object.keys(myHometown));
+console.log(Object.keys(myHometown).length);
+
+for (let i in movies) {
+  if (movies[i].isGood) {
+    console.log(`I looooove ${movies[i].title}!`);
+  } else {
+    console.log(`${movies[i].title} suuuucks!`);
+  }
+}
+
+// Date is like math a built-in object in JS.
+
+// STATE - the value of a variable at a given point in time
+
+// RECURSION
+
+let counter = 5;
+while (counter > 0) {
+  console.log(counter--);
+}
+
+// function calls itself

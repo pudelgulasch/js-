@@ -1,4 +1,4 @@
-// OOP INTRUCTION
+// OOP INTRUCTION - Object-oriented programming
 
 // const person = {
 //   name: "Vassia",

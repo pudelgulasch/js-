@@ -1,9 +1,9 @@
 // RECURSION
 
-// let counter = 5;
-// while (counter > 0) {
-//   console.log(counter--);
-// }
+let counter = 5;
+while (counter > 0) {
+  console.log(counter--);
+}
 
 // function calls itself
 

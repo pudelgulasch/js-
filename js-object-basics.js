@@ -70,7 +70,7 @@
 // console.log(ines);
 // console.log(sascha);
 
-tigers inheritance
+// tigers inheritance
 class AllSpecies {
   constructor(species, numOfEyes, numOfLegs, haveTail) {
     this.species = species;
@@ -78,10 +78,9 @@ class AllSpecies {
     this.numOfLegs = numOfLegs;
     this.haveTail = haveTail;
   }
-greeting(){
-  console.log(`this a test!`);
-  
-}
+  greeting() {
+    console.log(`this a test!`);
+  }
 }
 
 // class Tiger extends AllSpecies {

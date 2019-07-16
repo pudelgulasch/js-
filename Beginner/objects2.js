@@ -13,6 +13,7 @@ for (let x in myHometown) {
 }
 
 // adding new properties
+
 myHometown.state = "Berlin";
 
 // delete properties, if you console.log a delete you get a boolean
@@ -48,6 +49,7 @@ for (let i in movies) {
     console.log(`${movies[i].title} suuuucks!`);
   }
 }
+
 // outputs the keys of an object in an array
 console.log(Object.keys(myHometown));
 console.log(Object.keys(myHometown).length);

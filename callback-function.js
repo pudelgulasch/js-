@@ -3,7 +3,7 @@
 // a callback function is a function passed into another function as an argument
 // which is then ivoked outside the outer function to complete some kind of routine or action
 // a function that accepts other functions as an argument is called a higher order
-// function which is called a HIGHER ORDER FUNCTION which contain the logic for when the
+// function which is called a HIGHER ORDER FUNCTION which contains the logic for when the
 // callback function gets executed
 
 // a function is a value representing an "action"
