@@ -1,0 +1,2 @@
+- Window = represents the browser window - TOP LEVEL OBJECT
+- Document = main object of the visible DOM - contains HTML etc. 

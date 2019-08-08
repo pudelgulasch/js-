@@ -638,3 +638,26 @@ while (counter > 0) {
 }
 
 // function calls itself
+
+npm test
+npm install
+npm test
+excercism submit hello-world.js
+exercism submit hello-world.js
+cd ../../..
+exercism download --exercise=two-fer --track=javascript
+cd exercism/javascript/two-fer/
+cd ..
+ls
+cd two-fer/
+
+delete x in spec file to run second or third test
+
+So far we've seen several different kinds, or classes, of objects: 
+strings, integers, floats, arrays, and a few special objects 
+(true, false, and nil) which we'll talk about later. 
+In Ruby, these classes are always capitalized:  
+String,  Integer, Float, Array... etc. 
+
+Time objects represent moments in time. You can add (or subtract) 
+numbers to (or from) times to get new times
