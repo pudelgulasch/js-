@@ -24,7 +24,7 @@ africanCities.unshift("Dar Es Salaam");
 // const worldCities = asianCities.concat(africanCities); - old way to do it
 // new ES6 with spread syntax
 const worldCities = [...africanCities, ...africanCities];
-// console.log("2: ",worldCities);
+console.log("2: ",worldCities);
 
 // sorting arrays
 // console.log("3: ",worldCities.sort());
